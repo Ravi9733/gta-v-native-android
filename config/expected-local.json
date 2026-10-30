@@ -1,0 +1,21 @@
+{
+ "_comment": "GTA V homebrew Switch port (M0jso 09.2026). Local self-pins of this dump's ExeFS and rewrite; no game data.",
+ "title_id": "0100B00B51230000",
+ "exefs_sha256": {
+  "main": "6289c88cf1b2055c5a14e3cfe71305e3d35036d09c65334377478a1f3d81f5a0",
+  "main.npdm": "caac9383dcf91c37a594041d79a00c29242a9ad313c29d93418ca3e21247b2ff",
+  "rtld": "8ef52fa92046d8ae8c14716372a17b2570d967578badb68d0b3217ee5ad2b2d4",
+  "sdk": "085c580b2e172404c48f9ed84caf7a47895269c1df664fe4a0cad02b880243e2",
+  "subsdk0": "085c580b2e172404c48f9ed84caf7a47895269c1df664fe4a0cad02b880243e2",
+  "subsdk1": "8ef52fa92046d8ae8c14716372a17b2570d967578badb68d0b3217ee5ad2b2d4",
+  "subsdk2": "82273b69a0ce3a71fb8eb4289fcc23277702ba2d219146c397d684953451703e",
+  "subsdk3": "17cda5e8673309bb1335cfbb6af79f837e254b36508bd758fda0392005de63be"
+ },
+ "rewritten_sha256": {
+  "main.patched.bin": "463070253cdaa345f198146220c42a07fbdf1a8824ac74d1f3e69cdbaf02bb7b",
+  "sdk.patched.bin": "ec44b61ca87c461e702cbaa609f7b7c3736f570a3c0f58b6924590dde261f1c9",
+  "subsdk0.patched.bin": "ec44b61ca87c461e702cbaa609f7b7c3736f570a3c0f58b6924590dde261f1c9",
+  "subsdk2.patched.bin": "bb088f6283c63725bbd448111cd037bdfb301dd0eec67b1376808ac4776889cf",
+  "subsdk3.patched.bin": "073fbe1cec3639101c67d5fc8e3d90b45a26e3c65bfe75c1f7820bf5d0cc1957"
+ }
+}

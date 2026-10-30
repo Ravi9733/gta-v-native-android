@@ -1,0 +1,2453 @@
+{
+  "snapshotDate": "2026-10-31",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "1eac4a0affade190f544e242482e991dc33d177b9096cb27b73c076495172954"
+    },
+    {
+      "path": "LICENSES/MacNativeGames-MIT.txt",
+      "sha256": "a035ee21f927d2247f30bedc8964c95b3a4d794f76c78cad178b68731815a79a"
+    },
+    {
+      "path": "LICENSES/SPIRV-Cross-Apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/nxnative-MIT.txt",
+      "sha256": "a65554a74de59bf4d2210f3d4381c67d6fc6fa78f237f83c85543773319efa7b"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "fd6db9e3e56195d735dec88d58b7ef3a7459c02552e041de2b57f58637c65630"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a0a0365be3d76e13196138f6a992c1d6dbf9c06aefabad0a82d3c1b467a9a29f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "5ddec3c8852d71a38da4becfe0117db75b37de96db9b25f629d3d98cc1fb6c3d"
+    },
+    {
+      "path": "config/expected-local.json",
+      "sha256": "36240b24701a826d6769a113183b9939ebe01c1f3298ee071068d4fff5b38983"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "sha256": "fdb4986cb6522292002ad56b43657fe616d9122daeda8721121dd39a879dd6a3"
+    },
+    {
+      "path": "ios/README-async-ready.md",
+      "sha256": "c57152196462684bcee978ed9c780d46bb34558297e6a8a3d9d96186b639d87e"
+    },
+    {
+      "path": "ios/README-shader-fill.md",
+      "sha256": "2dbf2da984d46bbca2c01706c97c5cb36c10271824a13eb63b8784a8130b52fd"
+    },
+    {
+      "path": "ios/Settings.bundle/Root.plist",
+      "sha256": "d3f1bcadaf13d70ca41a3e65e4cac52a47b2c15c9c6ef11112bbbad06d0a7ed1"
+    },
+    {
+      "path": "ios/ShaderTranslator/GtaShaderAot.framework/Headers/gta_shader_aot.h",
+      "sha256": "84a4e994d37bc5b1d7109fa323fbb352d5b0b779692678ed6e6b35a0147de352"
+    },
+    {
+      "path": "ios/ShaderTranslator/GtaShaderAot.framework/Info.plist",
+      "sha256": "9eed216343bb78d8fdf9cf36047d6fe9988ffdceb18fcd14db43ecfcf87cb339"
+    },
+    {
+      "path": "ios/ShaderTranslator/README.md",
+      "sha256": "eb8d1fb496684928fedfde5580220dbdf194f892ba25080d07ea05127ed07c88"
+    },
+    {
+      "path": "ios/ShaderTranslator/gta_spirv_cross.h",
+      "sha256": "b583bc3fa8e8291b29780eed6cf7f028549010265c28a96cb9f823e1f6c75194"
+    },
+    {
+      "path": "ios/Sources/Info.plist",
+      "sha256": "8fd08ff3b950e85d4617fd81d42d92726a770edaa1c59342679f43fbb62a64db"
+    },
+    {
+      "path": "ios/Sources/graphics_modes.h",
+      "sha256": "b1abf272c0901aa960d593f773d49c8f84d01be134a7d734922a4b82619f6763"
+    },
+    {
+      "path": "ios/Sources/graphics_modes.m",
+      "sha256": "e725af0feb8bbaf705f8e0965b757cc6f56af3958e45af756374a4c3973bdc5b"
+    },
+    {
+      "path": "ios/Sources/gta_completion_failure_ios.m",
+      "sha256": "7df32c604659f37027c8497179d86239a0e4eedaf802316e2c9d5644b5f1ac0f"
+    },
+    {
+      "path": "ios/Sources/gta_shader_translator.h",
+      "sha256": "b5912aed218dee95b1c476496ecc9aae685e2e9f401fe170be82c29ae567c328"
+    },
+    {
+      "path": "ios/Sources/gta_shader_translator.mm",
+      "sha256": "17a631f1e53bf4f24263e969649940ade9a50c69d89f141edaec74393b64b37d"
+    },
+    {
+      "path": "ios/Sources/gta_unsupported_shaders.h",
+      "sha256": "9678319ceff2542211291987e94d9088697495fee26d2f562d40af1244ff3051"
+    },
+    {
+      "path": "ios/Sources/gta_unsupported_shaders.m",
+      "sha256": "6b7a7072b52cfdc2fa9ff7bfc7a3192c95f771d9a833ae98bd1cab3820d25678"
+    },
+    {
+      "path": "ios/Sources/main.m",
+      "sha256": "22a089789711dd640059511def71349e8e8f10e79ed0148ccd852dc0cbd38a3d"
+    },
+    {
+      "path": "ios/Sources/touch_pad.h",
+      "sha256": "4dd708e6cfb530fcd2c6407bce0dbbb5cbf261de7d093709373f3374c4718fc2"
+    },
+    {
+      "path": "ios/Sources/touch_pad.m",
+      "sha256": "35d7c42c49397c71dd4523d40ce968217da8f3dbe329e49094eebd86b80a03aa"
+    },
+    {
+      "path": "ios/build_ipa_gta.py",
+      "sha256": "bab5f1eaf0d6a7955852d6a1b69242c7019e9be095650362d8d44a6123265ea5"
+    },
+    {
+      "path": "ios/compile_seed_gta.py",
+      "sha256": "0476d7ffb947a65a5ce5098d652e18c395bb81e93a0f432092f5a9598420f934"
+    },
+    {
+      "path": "ios/complete_gta_seed.py",
+      "sha256": "b249950e2879140a669d860b5381f93e5bab3f763e093d591e4a044922319e05"
+    },
+    {
+      "path": "ios/install_device_gta.py",
+      "sha256": "2ee0bd2d7c2dd23211b20920425bd1540c662269e31f351006f2387580432f6f"
+    },
+    {
+      "path": "ios/pack_seed_gta.py",
+      "sha256": "19c4147cf861087b8bffe4bb6dcfaa0b2c0ace0fa7d65c73c1ce88217feb8d32"
+    },
+    {
+      "path": "ios/patch_gta_async_ready.py",
+      "sha256": "8ffa0cc6719668a89b19f2faa0ccfc7fe73683c635e55529c9b9d966df71eb9c"
+    },
+    {
+      "path": "ios/patch_gta_completion_overflow.py",
+      "sha256": "ab72ff668efe36ed3f18cfec9db1a5aa9bea29bff07421157261845dbf4b27a1"
+    },
+    {
+      "path": "ios/patch_gta_completion_wait.py",
+      "sha256": "457b3c70d28ddb85affb4647a0ef50574c930e1f17ad596339bc8a98262f409e"
+    },
+    {
+      "path": "ios/patch_gta_job_ledger.py",
+      "sha256": "4c0a947afc8b602cd4d9489364fb365eaf8ad51c1712172ab8bff68b0201567e"
+    },
+    {
+      "path": "ios/patch_gta_worker_publish.py",
+      "sha256": "995f4d782e67441c5d80622046a1db10015efc92c389e1e5ee378e2eea18615d"
+    },
+    {
+      "path": "ios/prepare_gta_shader_fill.py",
+      "sha256": "7d39abffbcda81fb9b95e1f8abbd6563f39ebba5b0090ccc122f52f9325f47e2"
+    },
+    {
+      "path": "ios/project.generated.yml",
+      "sha256": "09acb26caf555d1f032215f657773ecd44b13c92a16393143bbc76d643166ef4"
+    },
+    {
+      "path": "ios/project.yml",
+      "sha256": "09acb26caf555d1f032215f657773ecd44b13c92a16393143bbc76d643166ef4"
+    },
+    {
+      "path": "ios/push_gta_data.sh",
+      "sha256": "6b8073db7f26bf279396cf10a59145408780dc2b6d36396907833c82c19b2689"
+    },
+    {
+      "path": "ios/push_gta_robust.sh",
+      "sha256": "db8a32c08596d8ff68c6f1121bbec237a61676eaa107eca07c8a1646746d2b0e"
+    },
+    {
+      "path": "ios/push_gta_seed.py",
+      "sha256": "732da7d529cff762d856addd4355ed890687330fce6e5e119ad65748ae3d6555"
+    },
+    {
+      "path": "ios/test_pack_seed_gta.py",
+      "sha256": "42672ca87a7237c14c966b4ee6576a2ab1bef64792a1d1047d009c304c3142f0"
+    },
+    {
+      "path": "ios/test_prepare_gta_shader_fill.py",
+      "sha256": "391c3a282e22d0d314c65ec4f79e475de5c9bcc9f537e985f87884d05163cc4c"
+    },
+    {
+      "path": "ios/test_shader_deps.py",
+      "sha256": "405805bcbe8acb6e5131b4c213371a765b1e800018e292477c783ae39ffdc857"
+    },
+    {
+      "path": "runtime/account.c",
+      "sha256": "12dcc12f42e2f4bb09db60895b74afe83c29cdfa824e72314c8f466a66f23434"
+    },
+    {
+      "path": "runtime/applet_host.c",
+      "sha256": "ff6748073f0a2bf19c2b270785891928f581dac955922e216e0be0149913984b"
+    },
+    {
+      "path": "runtime/audio_effects.c",
+      "sha256": "c99aa0df5b0b0511a55f6acff139a77f6a8559566833b6090d687eb780b860a1"
+    },
+    {
+      "path": "runtime/audio_effects.h",
+      "sha256": "d3da6198cc38a38c59902f0705022a218baab6c6bc1d543165711479554d5e50"
+    },
+    {
+      "path": "runtime/audio_mixer.c",
+      "sha256": "31a5bf4aad40767c264f25602f90a9e110a9fc945da21f45eaf8f9c4381a9b00"
+    },
+    {
+      "path": "runtime/audio_mixer.h",
+      "sha256": "6f5a83b9f35ca9fbfe70b1fa4fa6b290ab07f76da79cf042bf8e9eb67f454cbc"
+    },
+    {
+      "path": "runtime/audio_out.c",
+      "sha256": "da651ed85d9d5eeb8424753d4473ce931a8ad70d3a7688c4fe87047d53f75adb"
+    },
+    {
+      "path": "runtime/audio_renderer.c",
+      "sha256": "9d54534ca451667d2cd312c024c956dc8f8c1c9753c0c6dc418d6f5714413421"
+    },
+    {
+      "path": "runtime/audio_renderer.h",
+      "sha256": "a8316fb1861701c8a9b7b750982b08fffd52481af589eb8f60bd361f74ed0ab7"
+    },
+    {
+      "path": "runtime/audio_reverb.c",
+      "sha256": "bae0cc25820b7b2b3294c4f73198af84f8f45f59b4a14a22b05645325ccfe5a5"
+    },
+    {
+      "path": "runtime/audio_reverb.h",
+      "sha256": "cb7eb70ef0c19256c6a11f378b5af7baff6d7a40cdd92364e738a0d22028f624"
+    },
+    {
+      "path": "runtime/autoload.c",
+      "sha256": "55987e04004528d9e600e268bca7ab128927ea212fa7de549b2377036c79a63c"
+    },
+    {
+      "path": "runtime/autoload.h",
+      "sha256": "371c17681aa48ab4378b46f8f275b54f9dc050cbd0ac7fb449859cdf82dc7ec0"
+    },
+    {
+      "path": "runtime/completion_overflow.c",
+      "sha256": "5dbb971801a2ef20b819eaa5a6171f3584e4b8192ceb1e5ec31622109268c9ef"
+    },
+    {
+      "path": "runtime/completion_overflow.h",
+      "sha256": "3a920aeda82965140d7e096b1800ad3c141afefe684403d919c1e80641a27be1"
+    },
+    {
+      "path": "runtime/completion_overflow_bridge.c",
+      "sha256": "5a4c95ba2d2da414e82ce90a41ce7fa022a986df8df809397aae584d931ef1cc"
+    },
+    {
+      "path": "runtime/completion_overflow_bridge.h",
+      "sha256": "604536cd08e450e9316274a16cfc428858f1d21a39c3e1927eac557989f8d128"
+    },
+    {
+      "path": "runtime/controller_map.h",
+      "sha256": "46f29729959c3271f0ddb074655dc3788d0258fb2107838a3ed1fd7b3bd8cd29"
+    },
+    {
+      "path": "runtime/freeze_watchdog.c",
+      "sha256": "5111a255e14998459ddefd84503604e276f0c7bdfdc8c692e9fa27545bbeab48"
+    },
+    {
+      "path": "runtime/frontend.m",
+      "sha256": "cb852ac82106d04323173be517d7ab5fbf9ee2557c5aaf76a6913f23fe746ba1"
+    },
+    {
+      "path": "runtime/frontend_ios.m",
+      "sha256": "a6953d139de404bde09f8c488fd1f08b022b0948d196fc5355233a400a929589"
+    },
+    {
+      "path": "runtime/fs_host.c",
+      "sha256": "4e3a3d6b11f5680d79e9e2ee8f654291d11123a0c5cf9daf0cfe26fb963ab911"
+    },
+    {
+      "path": "runtime/fs_host.h",
+      "sha256": "5f05b7c5c310afceac3ec6c3495a79831eafb0a9f0cb11a83b62b7d45506ce61"
+    },
+    {
+      "path": "runtime/game_patches.c",
+      "sha256": "cf2c12beaf730e6c1bd0c9972b7dfa9fd00fc9d7db879ac3dccbb0ed7b4d111b"
+    },
+    {
+      "path": "runtime/game_patches.h",
+      "sha256": "28c3d21b81852deba7be60c13b390ba5b299d84f65c9c39c00e07427842ed069"
+    },
+    {
+      "path": "runtime/game_slot.c",
+      "sha256": "8518f3f559535e1cf0e0b199d518bca965a1ef3e640440d1ce763246b35b140e"
+    },
+    {
+      "path": "runtime/game_version.h",
+      "sha256": "6ce57ecd1f779f3b2ca3ff4ff8d0fa91ba90c74fdd154e9a33947e4659805c88"
+    },
+    {
+      "path": "runtime/gamepad.m",
+      "sha256": "26e4e9871db040da7e2cad0e557b236d4480397b9744708394c4ba0dd41a93fd"
+    },
+    {
+      "path": "runtime/gamepad_feedback.m",
+      "sha256": "6e674288e59308888820c92982cfa19d6c852e33f4c5b46e8e0b96ba5e748ba1"
+    },
+    {
+      "path": "runtime/gamepad_layout.h",
+      "sha256": "80876703b4150b20b82345e159eb510aebf5df8a5248304e11c1eca6918faa2a"
+    },
+    {
+      "path": "runtime/gate.S",
+      "sha256": "dfef36ae8eb177379f931852566533ef2311e2e01ec1e21eb37fd27d07894b1c"
+    },
+    {
+      "path": "runtime/gfx_bridge.c",
+      "sha256": "29a5612ffcede876b3db528143e71eee6eadf997c5ddfc1e2c50548c410f2623"
+    },
+    {
+      "path": "runtime/gfx_probe.c",
+      "sha256": "357aab981b6fab5968163f8bfc224a99275663910fbaa3be94997cdb151725ae"
+    },
+    {
+      "path": "runtime/gpu_path_probe.m",
+      "sha256": "42e7088d9cf4a0ea3a958411601c1fc0480146db37c176804b44d07a8729e98f"
+    },
+    {
+      "path": "runtime/gta_completion_failure.c",
+      "sha256": "edcf5616a55161539c79906af3c15cc65bdd2a2ad371796b02fd8ae9962fa510"
+    },
+    {
+      "path": "runtime/gta_completion_failure.h",
+      "sha256": "0f899d2904a8f770ba20a62de25f82876b39dba5814e22b7723a89869c27bbe3"
+    },
+    {
+      "path": "runtime/gta_job_ledger.c",
+      "sha256": "1475f7d91fe35b0cad11001c80a6e855c0dbb8180f51d13e1624578300ed815e"
+    },
+    {
+      "path": "runtime/gta_job_ledger.h",
+      "sha256": "e77d41821be01fd29db94e9a3fdfd4e7844173357bd3ba7fa5e2e12bbbf8ac99"
+    },
+    {
+      "path": "runtime/gta_job_ledger_bridge.c",
+      "sha256": "a642ddb0399eb3a167f0a6314556730a73bda2a24b8fe17d7a3c644d0d432c47"
+    },
+    {
+      "path": "runtime/gta_job_ledger_bridge.h",
+      "sha256": "dfbf1c257ac4757c64c7103e53c0ee1021dcdf467495a62090c8d9bedcb6f0c6"
+    },
+    {
+      "path": "runtime/gta_job_ledger_command.c",
+      "sha256": "0d62aa5f4c7bbba88dde5ea730903e59731cbac6710cb09c570e704695437ce8"
+    },
+    {
+      "path": "runtime/gta_job_ledger_command.h",
+      "sha256": "aeef91c4ea375c77e31e4c55d8ca6900464f57ff166c981022ee5744a6f91f3f"
+    },
+    {
+      "path": "runtime/hid_feedback.c",
+      "sha256": "a80da76994cdf6efba853124e1cdbbd1419c56773816f1db2795f1c53db97fbe"
+    },
+    {
+      "path": "runtime/hle_stack.S",
+      "sha256": "d9cb0a815d7dce2b38e15672631a3ff5a7feaf054410c56fd9b3a5197831c12d"
+    },
+    {
+      "path": "runtime/hle_stack.c",
+      "sha256": "7ab1eb024031ad4d11bb5988e979f367a10d94519374ab52bd2d34964254c361"
+    },
+    {
+      "path": "runtime/input.c",
+      "sha256": "79abde61f2d3a856e73d612f862843c7664d11e437c819165bd0dbec18ffecd2"
+    },
+    {
+      "path": "runtime/ipc.c",
+      "sha256": "6f0bb67ca361d5df3714c68c27e31603f99b458eb7a4bbac84744f27308b2f44"
+    },
+    {
+      "path": "runtime/ipc.h",
+      "sha256": "3ce231727014a3c18616a7606c9b1d430e91e4e9247ac5a6850b4475f4cc163c"
+    },
+    {
+      "path": "runtime/loader.c",
+      "sha256": "b4c63f71e73d3192f62f6268b7c581cf979c04c93e10be86294f80d562281da4"
+    },
+    {
+      "path": "runtime/memory_probe.c",
+      "sha256": "aa2effdd3221a86ec464adad837069a4ae0f8ac794ecf85b6a846e20f37268f7"
+    },
+    {
+      "path": "runtime/motion_fusion.c",
+      "sha256": "c2d65a9a2333a519d99e89f650f6eb0457e43fa2b46b385630563cc2acedaefd"
+    },
+    {
+      "path": "runtime/movie_host.c",
+      "sha256": "51e56996359ef0d41d71ede3efbc5be576be3c6a13aceb2b1a949af3fc06509c"
+    },
+    {
+      "path": "runtime/movie_host.h",
+      "sha256": "9c9722110adf5823e005d26793706c3b84b9f871f01610ded175d1e570707f4c"
+    },
+    {
+      "path": "runtime/opus_codec.c",
+      "sha256": "c39402da25495d262df605ff53797b806039952001c18e54426acdb9bb7c25ff"
+    },
+    {
+      "path": "runtime/ro_host.c",
+      "sha256": "3734b790ccd5fbd298ebac878498f1b81a329e539e880c6305eb8ae61f2c007e"
+    },
+    {
+      "path": "runtime/romfs.c",
+      "sha256": "6ca9638e332098ccb1986735f8209b1917e50ab6ff32d1cebc12b7c211a6e91c"
+    },
+    {
+      "path": "runtime/romfs_path.h",
+      "sha256": "b40395d8504f9b3a8debab8a3368e7e44024e9fc33056ba10c19f0f8c30e011a"
+    },
+    {
+      "path": "runtime/runtime.h",
+      "sha256": "a89900997d6864c4b5332076ded74c85e2c8ab7335c14dc916a6aaaeeee7d63c"
+    },
+    {
+      "path": "runtime/services.c",
+      "sha256": "4b38121441a5dfd987403dd47ac9fa5930f3ef2fc7e1a1d02c89bdc8e4f29d1c"
+    },
+    {
+      "path": "runtime/shared_font.c",
+      "sha256": "a185dc722a2ac17db92f7079ec2c9d059899792c1e0141fa6977094a6babec83"
+    },
+    {
+      "path": "runtime/swkbd_host.c",
+      "sha256": "5a05c36e62b89dd1a01b8298b2223bcd7bbd6b25dadb84cf28c440d67a94f577"
+    },
+    {
+      "path": "runtime/system_services.c",
+      "sha256": "e9cb13e8de16426b790c7091098482d9bd85b6265913b42cdd9db6707e0e3d4d"
+    },
+    {
+      "path": "runtime/thread_compat.h",
+      "sha256": "dbc5e6511a4fc092127be4bc8792cf5e637a12bebd436aa8002e005f6fd6d440"
+    },
+    {
+      "path": "runtime/thread_enter.S",
+      "sha256": "ece4e27fdee5eeada072fab1e00f6a1823ce28a556286b623a1dd2e6d5c7c904"
+    },
+    {
+      "path": "runtime/threads.c",
+      "sha256": "e3edd96b5423fb595208efad378a689b39799713146a087ff274db64b61a10df"
+    },
+    {
+      "path": "runtime/time_host.c",
+      "sha256": "62e5685403437ea5a3d9758042bc0bf08481c19c1d0fd6afbf0b26d876202766"
+    },
+    {
+      "path": "runtime/vpool_probe.m",
+      "sha256": "b959b54cd69933f3e18bf25cbf6ad8bf07d350a1540d3ca97f57e8bb203c5436"
+    },
+    {
+      "path": "runtime/world_survey.c",
+      "sha256": "946aa6a3bd1441d96bf31170efd2f595092d74fe8e04ea6473fda71a5ab8359d"
+    },
+    {
+      "path": "runtime/world_survey.h",
+      "sha256": "847172d7d53e3f88e687f5cc72440319d233daa4c3dad3d45cb68c8e3780b8dd"
+    },
+    {
+      "path": "scripts/prepare_gta.py",
+      "sha256": "8b64c4d74f6ef3467c6597a59ac7dabda884629668ccb2b233084860e22b5941"
+    },
+    {
+      "path": "third_party/d2r/LICENSE",
+      "sha256": "5811600bb8fc4522d3310e8e0e637a1bb14b7c64412f8cfc6234872eb53129b9"
+    },
+    {
+      "path": "third_party/d2r/README.md",
+      "sha256": "111525c65bfb0857800ad6de167387aa3dd492748225baf7b30378a0687e7a81"
+    },
+    {
+      "path": "third_party/d2r/call_window.py",
+      "sha256": "a51c5350eeef1ae27934d4732f001b9d217db8495c0d97e44cd9ce2c2f191a4f"
+    },
+    {
+      "path": "third_party/d2r/equiv.py",
+      "sha256": "bdfbfe8d1dafe074599275d1ddc4ed7c09454d3b8c5189718a7dbca85cb9c808"
+    },
+    {
+      "path": "third_party/d2r/nsoimg.py",
+      "sha256": "3c82a5393f3445c23293e090c1af054d934de7524c04e19bd7f165cc9b708050"
+    },
+    {
+      "path": "third_party/d2r/patch_nso.py",
+      "sha256": "6f258afc93d5f2960303a1135b1ecea88ab4711234910e92daeb8d1e79052232"
+    },
+    {
+      "path": "third_party/d2r/relr.py",
+      "sha256": "afa0b371c494af7814ba0aa34c40f6376381269cd70895f24e61426e35129f44"
+    },
+    {
+      "path": "third_party/d2r/structck.py",
+      "sha256": "e104562bc463a885d2800898038e4561df70cf50eb84c26f049743a3066359c5"
+    },
+    {
+      "path": "third_party/d2r_gfx/LICENSE",
+      "sha256": "5811600bb8fc4522d3310e8e0e637a1bb14b7c64412f8cfc6234872eb53129b9"
+    },
+    {
+      "path": "third_party/d2r_gfx/LICENSE.deko3d",
+      "sha256": "a0b4cee8af79009481c8dd619bf51c1c909f92893b44c51e0b6dfb27fb7edd83"
+    },
+    {
+      "path": "third_party/d2r_gfx/README.md",
+      "sha256": "6d6967dff4892fa2132dc269d6ff208412dda21d5b759f6cd096fa9160b4469b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/GtaCamera.h",
+      "sha256": "b18e91c418495d352382fa7d1b84c7754ce580cf38fc03a4b3e4d14e962430ff"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/GtaCameraRuntime.h",
+      "sha256": "ee2ccd3256794d9e95ec3dd5f04cb06e553e286dfad60723a882065da416cab6"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/GtaLateSourceTypes.h",
+      "sha256": "96039075f73cf9d91ac47f501a8b32529366013c9b0d90fbd6042414c525009d"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/GtaSourceProbe.h",
+      "sha256": "42b220cb7a753c605a56236236a94552326943e31869659d928fcd17b410f05f"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/GtaSourceProbe.m",
+      "sha256": "cd9dc93d2cb5002f676ce1039db3963721719e4d272f1f1f4d4616d6eb66cde0"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/GtaSourceSelection.h",
+      "sha256": "5ebe5f25c06abfb753cce274a901cfe7f02e8d1e097612b87a25096856a9be81"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/LICENSE.MacNativeGames.txt",
+      "sha256": "a035ee21f927d2247f30bedc8964c95b3a4d794f76c78cad178b68731815a79a"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/LICENSE.nxnative",
+      "sha256": "a65554a74de59bf4d2210f3d4381c67d6fc6fa78f237f83c85543773319efa7b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/dm_signpost.h",
+      "sha256": "a0a6917266499a0328edc1a2d873730002c9b0e1461a2cebb3b03c4b9653ceb5"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/dmsh_chain.h",
+      "sha256": "00e34e345347b0dc0fb78a0d20639024fc25d822811328891532166e0f0dfc9a"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/fps_overlay.c",
+      "sha256": "2410863c59f696465b9c86fc11f47f06d732498a47cb4a2142cabede5c795af3"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/fps_overlay.h",
+      "sha256": "b6409af91a296f4b38a1e3678701ee7f9ca68650c08094c8e6c7b4d0b6353cfa"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/hle_nvn.c",
+      "sha256": "f7a43e1bc8dae512e762f0da9f2a66e6b83a0cfd50cc06f9f5aae8b2820b319b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/include/mach_vm_compat.h",
+      "sha256": "b681c0778caf4b37993d983963cf725808da53a33e1dff358b575bc7ebac4ce7"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/include/nvn.h",
+      "sha256": "410af0a7d111f4753b285a8984b3e19227b77dbe40e230b5ab709a15f95a80f0"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/include/totk_ui_lang.h",
+      "sha256": "161ff964a975022af3186c4c06f1e5db7910b1f08d2cf60d34dff90869b147b5"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/names.txt",
+      "sha256": "f4df8ad6c749b69d22a890e639105aeb46e07e443a3c0e6edb65192f8ef4bb8f"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_arg_address_cache.h",
+      "sha256": "64d062b5bc3aeb234fea3a9e68e51ccc904c3b815e8a75f839368e27802b3211"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_copy_alias_probe.h",
+      "sha256": "5082665414f9b471e1fc08c842a8ef6092ad619cd4fe6f09efa4876b5695d389"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_count.h",
+      "sha256": "bf9139519e016e6bf177a51ab012864c87068395cd73f090a1f9b5f46a564ed6"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_cover.h",
+      "sha256": "1a69dd6ac3a5fa465b048f4b97733fd408ef3aa2921896f016417391c8b4e862"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_cube_group.h",
+      "sha256": "1a7029ad394136c6b7068bcf7a9f553443cc343c98e84c8eee130f27ddb1ebe5"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_cube_group_probe.h",
+      "sha256": "4c93ba7ddf72f7a122a9016452ecfd0ef430dd7d3871b81bc9c9c6e279a7f8a3"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_depth_clear.h",
+      "sha256": "a464a82b54632bef8b4f3d83a75e631941665be66d31e68dec787f173a9c2b18"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_diag_range.h",
+      "sha256": "8700bb5c9ec7e74cda21a3f2630811913331a2be84281f4dc19c0b4d8263288c"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_dirty.c",
+      "sha256": "c119fe5c859d939fa57ff9250da907860cefc2efc0cb007c66dc82c0fab2e058"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_dirty.h",
+      "sha256": "ff8e0775dd609b4c0b984d7efc054025b8f0eb1cd17e96fdd1129f773f5a55ce"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_encode_fifo.h",
+      "sha256": "83a71bc25b69e0d7f2f7d38d9ae67736b7c4972f0fae6c8f8b2e72994602cc05"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_entry.S",
+      "sha256": "950360254152f5338c1eb6bf065fedc1dd4b1c91e33032648a046f630c3c001b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_fan.h",
+      "sha256": "1e5ed15e4c763f1a964537ea0b3cc4bccc6aa105dad3d6dc5b6f5ba36f3065d6"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_fan.inc",
+      "sha256": "78748f3a2769a1c4d8cb153db049a8375e2dc7ece95aff49731b710c73a3d31c"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_camera.inc",
+      "sha256": "5008c6c350d6ac9297941081900b1a7f92546b317df2b33448cb04347a607e3b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_late_source.inc",
+      "sha256": "91d593cc9b6d9ab2c6792b2dbfbcf3a7de21345e6715a17192c54fbb73d2973b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_late_source_early.inc",
+      "sha256": "ba40e874a5cc3cdc494bd3b2dbfdeb4dc93b91e22ddf0616fce1d9868d986c08"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_mapping.h",
+      "sha256": "b9d48049cbb63a8d3dd37ca85dc3054793e4a6ffd30fc8ff0a49b0344f674a48"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_mapping.inc",
+      "sha256": "2c448c3fd0243de097361da9d4143c8fd195ca75b3853b13297866304ce9793e"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_mapping_keys.inc",
+      "sha256": "eeb7a9d4bce50c9a981bbf16a13765390f48f9b8846032f7bc84fb6ef3e3bde2"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_gta_source_probe.inc",
+      "sha256": "d730483342438f0a73f1bf82daaff3530ee3315349477706450f14e9c47e0008"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_hmap.h",
+      "sha256": "ef7797bd44d9cc3e47010c9913dd3e1972e64c206ddd05f8beeecb643784c55e"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_impl.h",
+      "sha256": "7bf5309bca0f3856345cc6a238352e5a86a84da171f246b484cdae9f1754ee86"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_mtl.h",
+      "sha256": "3da7e11ebb53add76c3c528aa600ca2b21d61879b623d6e7c4531eb93f845bff"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_mtl.m",
+      "sha256": "3bb13fb55f6437a48d9406bb3604578026ce003497831ff993d2bd605b37fe7c"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_obj.h",
+      "sha256": "8059ff0463b05f8178879599b543b440e87e706f35a9d98883873590a89a5b9e"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_pace.h",
+      "sha256": "9a2e8bf3494f62166db3311fb47d6ee375d03ec79d1876240b8522b7a85a04ba"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_pool_index.h",
+      "sha256": "eb09c1aeb334469421495880c68e8e3b7e795d582abe1fcaa1330734f923670b"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_pool_retire_probe.h",
+      "sha256": "ed5ae8f7f084561c0b233d1138ba6f6aa52e3ead7c654dbba76dc406b72ff9bf"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_protos.h",
+      "sha256": "547b6c48d9424600bb16686767b9965427fff233de04b7eb4ffc74a9266cfa76"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_pso_skey.h",
+      "sha256": "d9f22144a60b3078635d83cded77f667b0a8e0cb21ade3b5f1a7ae015354e8c1"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_refl.h",
+      "sha256": "31c75311a04f80118427e908c2724cb5301690655078c947e77e4f0ff4b68564"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_refl.m",
+      "sha256": "a6b6436440948f6a3a929a9c95534bb42c60d95a3427d6931c17fb7c45dc107e"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_registry_lock.h",
+      "sha256": "e60ab4f92205a7de3145849749dbfc2c985eeccd80453b84c61fa4d6b3ce23af"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_render_stream.h",
+      "sha256": "59d950844c6ae9c0f9751c38d4093a3131f739efe6fc582e8b613838b1d04ca5"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_rtex.inc",
+      "sha256": "7660c7fd7a015eb6aaaf3c9a01c70935c417141900b033465be1db84616713de"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_tex.c",
+      "sha256": "d1cb4c5fd38f4f423b56970a5898dcf10326302ecaab82737a0e0f463ba1df86"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_tex.h",
+      "sha256": "037b47e1f262026c6a08e0deb688a7176eb8fa530adf7f4cdc40b7155975caf3"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_tex_slots_probe.h",
+      "sha256": "a392489f5f92fc9c64ec09ae6873b82b3e1c89207c469369b94e4a975349b05d"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_texture_plan.h",
+      "sha256": "f98e1d292434098d1baa45b7fe53f2f616ccf902e55fcde2c500a502f51a0c38"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_thunks.S",
+      "sha256": "9796bc8a116b067892f315114696fb84edecf2c10eef3e3dfaf4dcd8fbfb2d1f"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/nvn_view_cache.h",
+      "sha256": "4437585470ac09470a4be3d63c26a92b444cfecc6c5338a68cc7da2303fb634c"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/rt_range_check.inc",
+      "sha256": "5ea5738eac7ef458bf08783bb751077f43cf8382492503327d564cafb20ff580"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_lifelog.c",
+      "sha256": "27955576ebb4dd8a5d67eb70c61ccb5c935902dfdf86c945475773cca2c6a064"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_lifelog.h",
+      "sha256": "0d26fafff76d372cdbf21f5afb77e228da8d83651c910dd7565a7a91c131b561"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_mfx.h",
+      "sha256": "14940e37b699e96820e4ba14d8825d45f016e2dca0ffdbe7b4b9f721c6ae6784"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_mfx.m",
+      "sha256": "27023215160b45479bffc1383561c5580ca61bbee2f115727504831e0bc3eaab"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_mfx_mode.h",
+      "sha256": "f005ff3fb6984eeb9b0000aa1245a2d689cb52799f0c5ecdec642480ebd0fe44"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_mfx_up.h",
+      "sha256": "8ff05635c5ea64dadbbffe4e88382bfb757af11f59967a57724fcd1f9c287cd5"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_mfx_up.m",
+      "sha256": "0a0937483b7e8ce6a553d6fa1869adb75ca93de8a83d3dc41b8ff1efdc2a82e3"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_nvn_ext.c",
+      "sha256": "d633e1cac812ac8b51a4dc645d952fbb1a847ec7a963718c7ec53fee492f2df2"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_pipeline_archive.h",
+      "sha256": "623ea09d69905fb4c6a074f3bd91f2f788fb0c38339a6f30ae54b24b76499d98"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_serial_set.h",
+      "sha256": "953d9570caa545a46b66bb00696d8df78a958231bcbcadccf37b41871cae3bfd"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_shader_contrib.h",
+      "sha256": "35a50c4c84f9904c46cbaf55b6ffe58d99e371a04fc2aa62939b01b8fb3b79de"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_shader_rt.h",
+      "sha256": "7657fcd341836aa5b13d8c90f03eaf62241971d7a8061e9dec6aec030345ba5d"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_shader_rt.m",
+      "sha256": "845612a4eb22418e7913ec8edac1a8ef08893043ea598c086b5e40b5caa8895e"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_shader_seed.h",
+      "sha256": "e58d7ae8aa6f825ab10b9588770c402d7cc6be24d7fc42dc8c6381fe23f3db84"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_sysload.c",
+      "sha256": "1f6160b2991fe85e53603e22be0b7afd7628a7da69cc4d6724be0d70bbc37227"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_sysload.h",
+      "sha256": "b4a7f0cd1d2c2f1c27fe0710e28f60a6f088b559c5fb8fcee3bf168fac959df6"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_timeline.c",
+      "sha256": "d8579043f25c3309d6ad0f3e66b1509fff5ca6f4ebb957da0a2d11351faf72ff"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_timeline.h",
+      "sha256": "3c934b12e9f47cfefb46a5191e25dffe0b9f49493f83c08b97e8cc7ff4801e67"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_vpool.c",
+      "sha256": "6f84e825a6c5c5fc39906ee2ae502cab5913fe37e05ea8412740d7305d5487ab"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/nvn/totk_vpool.h",
+      "sha256": "c74ba1124c02d74ef2a3993455b73de547ed11f63d39ff8f3e81e0cd3233b2f2"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/README.md",
+      "sha256": "568fe33882fcaac024ece8980fec754bdea773091dfd360cc154b6067de7c60d"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/README.zh-CN.md",
+      "sha256": "08902cd6ef5288e942e8572b6930539f1ea249533d7b4ad600b9cb204340acc8"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/gen_bctc_msl.py",
+      "sha256": "361764b1934bc7d6c6721e9b2954817fd008aa444b59f089caa2eaea6c4fe154"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_bc1astc.c",
+      "sha256": "29bd97bdda8e4a58aa619767a40495aaaf9fa0892f8c0a473af424558ba801ae"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_bc1astc.h",
+      "sha256": "9442d3763dcefb9693aeb398cc52e431c1ef1fa42f1509ce2ab294f1bb5fa816"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_bc1astc_msl.h",
+      "sha256": "c602ee0305b73c21ebb64789dbdf7c2db74a873f64e314428bdde6a2617bcfad"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_bcdec.c",
+      "sha256": "6760286c7d5ff3a38aeceee70155d86945ccdd15811a36e23c2f26fabbdb1d00"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_bcdec.h",
+      "sha256": "e83efd39966eeae2d6b34de5b916b25f674bee7d1f5c4b7abd50d47b72e0c5aa"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_bctc_msl.h",
+      "sha256": "2b295a4d98471f25a6c5e08462b546a0c95de96984c5011906f36ca00785f866"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_deswizzle.c",
+      "sha256": "d8f66514592c5a52bd8772b4c8f76e7d19ee42786de2c447302aa33edb1ab95a"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_deswizzle.h",
+      "sha256": "fd3088bcec285f3ad4bce2773ca7b7f578380a1fbde9a4f10c32f423449834a8"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_deswizzle_gpu.h",
+      "sha256": "b828e3bd428af26e15af34a0654034138d97daa8dbf7d4667aab996d1c3030cd"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_deswizzle_gpu.m",
+      "sha256": "6f4484c234443e6531618a7de12bb1ca7784e458ddaf9f8d99489ee3e62d2e32"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_fmt_mtl.c",
+      "sha256": "18ee829ebdc60a0cacbca318969038218c3b7ba51ab1903e8d30ed113bd96f1f"
+    },
+    {
+      "path": "third_party/d2r_gfx/gfx/tex/nvn_fmt_mtl.h",
+      "sha256": "319cde963160339299bbab763f18dbe73847ae616d9c4fd324387e48982dd944"
+    },
+    {
+      "path": "third_party/d2r_gfx/host/dm.h",
+      "sha256": "690c5972c4be9ac6bf9af97b2f5174f52dfc3fa4378c5a0dcc96404d93413720"
+    },
+    {
+      "path": "third_party/d2r_gfx/host/front.h",
+      "sha256": "5e12801663df9f5f540617c64a44dedfcdd8f5b5ae7e390ee237a2eae9066bde"
+    },
+    {
+      "path": "third_party/d2r_gfx/host/hle.h",
+      "sha256": "393e4f489670965da42969ca51c6a80c48452ea3309d3038a0997fa0c3ba97df"
+    },
+    {
+      "path": "third_party/d2r_gfx/third_party/bcdec/LICENSE",
+      "sha256": "2414c782587f6e96661cb0d19d752432ddecfcc1a221b4cb12bc2253a54dc5ac"
+    },
+    {
+      "path": "third_party/d2r_gfx/third_party/bcdec/README.md",
+      "sha256": "b4d5a194d96dd642799ec2564b52a52da77010debfd3306d24880e2791ce6c20"
+    },
+    {
+      "path": "third_party/d2r_gfx/third_party/bcdec/bcdec.h",
+      "sha256": "d8c8fb12f19692c42201fce5bd43fa4be54e8fb5d28f2f246d088f40b6e17b31"
+    },
+    {
+      "path": "third_party/licenses/Ryujinx-Audio.txt",
+      "sha256": "781bbdf040b7d0286c47cca6bffdb9148dfe751c0c9cabdf1a1752412a2e56b4"
+    },
+    {
+      "path": "third_party/totk-scripts/extract_exefs.py",
+      "sha256": "c163b0e22cb36fa7af5fba26e953dc45bdd0b710bfc72a634f89dc311f822945"
+    },
+    {
+      "path": "third_party/totk-scripts/extract_romfs.py",
+      "sha256": "72c147532f7aa90c210f5ef24962d5fbae15b7557bbab10580f8e5982f851dd5"
+    },
+    {
+      "path": "third_party/totk-scripts/extract_shared_fonts.py",
+      "sha256": "682a225b7149bca0dec3f3dd934d19c7c9253811704e29f6cb95c53f0f7d3351"
+    },
+    {
+      "path": "third_party/totk-scripts/prepare_shader_seed.py",
+      "sha256": "0fc1b5ea582d8926d393b5a1808b60ad99e9f43764bf47fa336ad70b064387ef"
+    },
+    {
+      "path": "third_party/totk-scripts/shader_list.py",
+      "sha256": "17f3ca64e50f8a03db2d291baaa4fd81574bbc1b8182a3f819af88a1e6254679"
+    },
+    {
+      "path": "tooling/decode_gta_late_source.py",
+      "sha256": "a544eb1b05b38f6383a2b353cadf37a3371985b74585799355a44753a4cecc6f"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/README.md",
+      "sha256": "358b3fe920351fd999f9d7076cdc50807811fc357a4d1e711c7b3d36ee647830"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/generate_sources.py",
+      "sha256": "d113038f01f56d6d027b52903af02e522d6641e6beef4bf29eb3fd2fbbdf9f0c"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/spirv-cross/build.py",
+      "sha256": "67c6dd3eabd0bf8e3e911fb1136545d5c701419acbf75ddcbeb06e58dbddf3c5"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/spirv-cross/gta_spirv_cross.cpp",
+      "sha256": "66aa8c1a0adf5b45657f137f8b88d473f2e948f926f7f680ebfd827eb9c6b246"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/spirv-cross/gta_spirv_cross.h",
+      "sha256": "b583bc3fa8e8291b29780eed6cf7f028549010265c28a96cb9f823e1f6c75194"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/translator/Exports.cs",
+      "sha256": "7ddf7e8e2e98e42eb2e03b321118c144f95e06fe09009cc4e89409e95156f3a7"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/translator/GtaShaderAot.csproj",
+      "sha256": "c41de669fd49c01c40d96b2911179a79a2ec1a848e580ea13eb9d7a468414b82"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/translator/Program.Generated.cs",
+      "sha256": "df1301bca1e45929a4c6b90651be9244531805194092e490cf2196addc1ce65c"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/translator/Service.Generated.cs",
+      "sha256": "a94e2e3624decffd4a9394b0b1c83df6f9de06c6e6f596cecd5fe253b6f69ada"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/translator/VertexCounterLowering.cs",
+      "sha256": "4321fb219bc0567d7e1b24b1aa02950b091f577e5713a82704a75bf9be50182e"
+    },
+    {
+      "path": "tooling/ios-translator-prototype/translator/gta_shader_aot.h",
+      "sha256": "84a4e994d37bc5b1d7109fa323fbb352d5b0b779692678ed6e6b35a0147de352"
+    },
+    {
+      "path": "tooling/ryujinx/.gitignore",
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "path": "tooling/ryujinx/Directory.Build.props",
+      "sha256": "8d690d6c3b861d7e352359d2ad9f2f0328051d0d1ce80ddb2928b278b7628d27"
+    },
+    {
+      "path": "tooling/ryujinx/Directory.Packages.props",
+      "sha256": "7e20a70653c83da80b2ccadeef477933aaccb7e0fd5ffe98436284c9bbf7a9f8"
+    },
+    {
+      "path": "tooling/ryujinx/LICENSE.txt",
+      "sha256": "781bbdf040b7d0286c47cca6bffdb9148dfe751c0c9cabdf1a1752412a2e56b4"
+    },
+    {
+      "path": "tooling/ryujinx/README.md",
+      "sha256": "0bfa2e870d67627060e513d20e877dede9a257293c62ef910e869ae3e1e2ecaa"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/AsyncWorkQueue.cs",
+      "sha256": "6f5c2a136bb4239c55c42e60c1a35590035bee1fd00ad464162c2d3046874ca6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Collections/BitMap.cs",
+      "sha256": "ed064c46a88b7c6cba2745f6834b2902948f3ee9e83985e3b4c9425b8cf72933"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Collections/IntervalTree.cs",
+      "sha256": "ce0acc84e8f7fccfab31e72525e47155038b1d0e051e0eb1f343de6ed4e47c67"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Collections/IntrusiveRedBlackTree.cs",
+      "sha256": "39842601969d07569e84cf36a8d636e771b67d64d463b1b752225b9d1375902b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Collections/IntrusiveRedBlackTreeImpl.cs",
+      "sha256": "f6aafa37bef615541e3395ba7ca3875351a32bb7c311b3bef2da602a316fd8d0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Collections/IntrusiveRedBlackTreeNode.cs",
+      "sha256": "6ec5648053ca09030f982b62cfbcfe6640a3feac95a4db12b6b36e7e62a6f257"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Collections/TreeDictionary.cs",
+      "sha256": "50ba81ebd1bd22e399dc282dbc0cbf246456b2c6923f3b7dcdc4ec236098877c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/AntiAliasing.cs",
+      "sha256": "1269510fe2dc7af695c60c68712016beb26102603147d69b19cc75628f1a11bd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/AppDataManager.cs",
+      "sha256": "bffe2a3055f10dd03d9242b3cdbb9db45efc8fb3baf97789793cc3aca9458ed0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/AspectRatioExtensions.cs",
+      "sha256": "c74e7f30abf2369daa9369af5914b8561cc37f87314bd935e40fa94fa7b5b9a6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/BackendThreading.cs",
+      "sha256": "a3a1afc5e45b57342abcdc9af9dfe8300e3f3750ada574bd6321781c91c6e8c3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/DirtyHack.cs",
+      "sha256": "56e60ec13a9d7dde0db562aecfd16eee20dd74a99b65c4d982a5a66f188e4d5f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/DownloadableContentContainer.cs",
+      "sha256": "64ab31b9c144b1a9c806943907ba6c7b9d22dcc746c1f538011ec40a70411e71"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/DownloadableContentJsonSerializerContext.cs",
+      "sha256": "854fea3b7381220b424b55105d4b80b404266c65d80e807492701739c63bf065"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/DownloadableContentNca.cs",
+      "sha256": "470aafa4834e75689df2bc7375dfbf3dffd227591e4e468d6a2d464434cc49e4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/GraphicsBackend.cs",
+      "sha256": "18c148feeed0b738c356fca546ba24860568287c808a37dc3a0ae6334dd86363"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/GraphicsDebugLevel.cs",
+      "sha256": "176ea2ef9ac1cc42df63832af33b58f2c456faa1b6e6a4a85bbeae7186d52eb9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/AssignedInputDevice.cs",
+      "sha256": "cd949bd86b8ec1669306e193d3ccbb8bbccf997ee92a651ed19121c00a51b3e7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/AssignedInputDeviceType.cs",
+      "sha256": "0cca1c97f12e333bd94fe7fa36102f3e8e6e16b94514e13755eba243a9b5ef76"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/GamepadInputId.cs",
+      "sha256": "32a32c2f791c823cd1f3f24c12904cdfadbdccba1081f269660569da01dc309f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/GenericControllerInputConfig.cs",
+      "sha256": "1596a61672af594afefbfd02b5a0d9286823b1d6320f7b7fc51efa9be4906c34"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/JoyconConfigControllerStick.cs",
+      "sha256": "ec1cc68d380489bcb1e45f1fd7292ba76200b737ba06f88babcb4db6bd4f1e3f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/LedConfigController.cs",
+      "sha256": "d5ef3ec97035e83b7a581736aab32f78068a554f714c746a91c793ca6344941a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/Motion/CemuHookMotionConfigController.cs",
+      "sha256": "92041bc34d3e41a370c0a2b54ca9b1233cdc20f6c26589a2833ba21fc0a526c8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/Motion/JsonMotionConfigControllerConverter.cs",
+      "sha256": "33da8e0bf41a49edc7b3c30ba045fdf03cb430f667e76d3a036d27786c9114b1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/Motion/MotionConfigController.cs",
+      "sha256": "379b457723c16bff44ecc2ad630cacd95165e3300a123160dfb9f6e1979773af"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/Motion/MotionConfigJsonSerializerContext.cs",
+      "sha256": "c9635967a50db32ae73d5ed936bf564555d45a012e31c678d4cf9dbc5379e223"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/Motion/MotionInputBackendType.cs",
+      "sha256": "863a9f923fbbc105e227f544a38d2bc827bdd04dcc0a77c3bd79e7f7d8a8f152"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/Motion/StandardMotionConfigController.cs",
+      "sha256": "b9da8ddea7725c8ca78b58013dbaaac410a67926b4351ea1d35efadfc68ac303"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/RumbleConfigController.cs",
+      "sha256": "a2b5a0b89c152b6e9283317701fd0cdfacb88938e99e3016b6e4df74b5cb148e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/StandardControllerInputConfig.cs",
+      "sha256": "ff6055179f63c83394927a4185501016fc32a55d6139b1265fe9c1d804752a0e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Controller/StickInputId.cs",
+      "sha256": "b24abd8d1aac60dad70bb9aba523779109857ad70c52501128ecf0a7eccb0278"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/ControllerType.cs",
+      "sha256": "c4d7d7f10b17fc9f1302e61719d8bdca0bf71a092105ac8f9a0cd28f3f073dc9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/GenericInputConfigurationCommon.cs",
+      "sha256": "086c8ae5c9755980b6e8f98866b6eda014f71bee9b42490e4de5ed894e612a23"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/InputBackendType.cs",
+      "sha256": "d9f075905a6f70d3e6f7bbff03896f28371ec0b3fc0eb024d0eeca1972776484"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/InputConfig.cs",
+      "sha256": "9ea6ab0899b2816cfbbd3ee418e9644103dd45fc06f4ddf92157de8deae5b28a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/InputConfigJsonSerializerContext.cs",
+      "sha256": "0c5ccde52bdbd09dd05c1c39491960a13bd586327062a3cef2a7eba6547ab16d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/JsonInputConfigConverter.cs",
+      "sha256": "fa4f0eae5a760d470504a77c00d14876062eaded544daa85dbd1aeb369fe4b41"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Key.cs",
+      "sha256": "2e66c8e8c36984d7f6bc33c4263ec2ea52a596eb0f521137371a7e3b3365210e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Keyboard/GenericKeyboardInputConfig.cs",
+      "sha256": "07ff53cc3a3ee80da8eb79023f82fd8060f0e5446f67991e7a80b3af550bd445"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Keyboard/JoyconConfigKeyboardStick.cs",
+      "sha256": "14a554264527e957a242acbf37ae025deffda79a8dce4489a8d15650b4301464"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/Keyboard/StandardKeyboardInputConfig.cs",
+      "sha256": "d76295773db6d9bff17a574d21632bb3d8b3b3159ef98a657d630241fea5d475"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/KeyboardHotkeys.cs",
+      "sha256": "936e654ed16676599aed3fafb2643b981335fcd1cf67f4d5dd064fe46350f956"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/LeftJoyconCommonConfig.cs",
+      "sha256": "cea9511569f4e7b686fd947de01058eaadeee03d7da90e7167b700239fdef15a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/PhysicalKey.cs",
+      "sha256": "2c4e6ce99e9e8ac9db1d23e2090921f2957985f924fb20e1be1189bb3e3a8a8e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/PlayerIndex.cs",
+      "sha256": "f29dc40ce2f7dca2fde21adc707f2d4afc488c64e1f13577c9c7eacac9c42e8c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/PlayerInputAssignment.cs",
+      "sha256": "74c0de70b9352bcc75566873cefe4f3006b0611a63e2ab56bba50132f63815d1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/PlayerInputAssignmentHelper.cs",
+      "sha256": "4ef21a810a96c506ad19507805c1cd966c54d9cce88ba1868bf50e8f2457b9cd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Hid/RightJoyconCommonConfig.cs",
+      "sha256": "c1d60c0bf98414f0ea13b602753bc9566d58dd959d9ccef66a566bd0188b2bd2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/HideCursorMode.cs",
+      "sha256": "cd0cd45befbb365e547b6f744e8611420bbc248a142a34981f28fcd2e5a59351"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/MemoryManagerMode.cs",
+      "sha256": "85355c59313ad5bc69620c463c94bddddb0bfa2db4c4b71a62635f4aa39c0050"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Mod.cs",
+      "sha256": "78dd5d76a05dbe0c3853377ad840891932bfee14a05c98945970b9fc80032972"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/ModMetadata.cs",
+      "sha256": "03db77aa57af1f66e30346b4b3164d425f0609f02919f57e1d4d4491d1ecd90b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/ModMetadataJsonSerializerContext.cs",
+      "sha256": "8d768841f81795f70cb35125a500c0e9e926cd1a1be251fa40b3ad885556f3b3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/Multiplayer/MultiplayerMode.cs",
+      "sha256": "f45954af9b18b91f78257e75c9be1d2512c6a5c5a256df9776a1d31283309fc5"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/ScalingFilter.cs",
+      "sha256": "eb409e223773d437a71ea1be08a797a0dd6bc77cf357e8c85b8882d6fe9faf07"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/TitleUpdateMetadata.cs",
+      "sha256": "4c57282fef1e9ee933b1cbbc96889ad1560da3c6bea90bd244788cdb09b8ec25"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/TitleUpdateMetadataJsonSerializerContext.cs",
+      "sha256": "cf970b17a597054fbac20a186f4d337c2df405b828db81c8c03a813e7f41fa37"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Configuration/VSyncMode.cs",
+      "sha256": "b850c1c49457f66b49da6aadc5a282aa34d4ec2a5afe3796adb3d9df2fc373d4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Extensions/BinaryReaderExtensions.cs",
+      "sha256": "2ded38bb5fc06ab0b77622a4beeba1054caf6aa2e8465d57a2826fd5c25300bc"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Extensions/BinaryWriterExtensions.cs",
+      "sha256": "4df420b281c6094973c59d2b45477391fd97f1f5e2c04aeb334a88656db98ea2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Extensions/SequenceReaderExtensions.cs",
+      "sha256": "d05379c9d72636ea5725cea8200da94f3d5638c09c0534e30cc3422eb72ed00f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Extensions/StreamExtensions.cs",
+      "sha256": "e0c14ba084d8a2afca2b24297b46d24d3bf25a3c17b030dc1150f4d5f480beb0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/DriverUtilities.cs",
+      "sha256": "c5c510ece04b00ad196a58cc1c49e066b99c0bc9b23c549ce8baee4c723c4447"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/NVAPI/Nvapi.cs",
+      "sha256": "1b40e778d1fbe76400b20c58e36efde455e363675aa5f3e663cc0d978f07c85c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/NVAPI/NvapiUnicodeString.cs",
+      "sha256": "15698de0222b4ac0e5267175c8274fb38d08a6424c3146e5846a6da129c6253e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/NVAPI/NvdrsApplicationV4.cs",
+      "sha256": "a32c41a677fc4fa38c18d48118ce0172caa7890cf0fb6c4663ecec6e4587657b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/NVAPI/NvdrsProfile.cs",
+      "sha256": "beabc1a8f38d8787e9cb01ef112544a642fe3942269734924aa03e2529c510ad"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/NVAPI/NvdrsSetting.cs",
+      "sha256": "e8afaa9c745f14aa766a029441b7eab6d27581cedc0490884275c61195e1f06b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/GraphicsDriver/NVThreadedOptimization.cs",
+      "sha256": "049c6e656f6dfaa1861abbc5715b0f91d009c58d182166df041e5b5edebf93a7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Hash128.cs",
+      "sha256": "e46cc0330eb526040c107ed0fb01eda4a1fbef2793253fe40527ca22082c4538"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/ConsoleHelper.cs",
+      "sha256": "9de14ca652250d2f184776667ac3560840cb24565c9e4238da1d593d36ee7910"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/FileAssociationHelper.cs",
+      "sha256": "e453e481301069666ddc5c24facc7057d8de9f718a1cd8d68c0f6e93566c092f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/LinuxHelper.cs",
+      "sha256": "e1330d810cee8d4e38c65d6e84664709373dc02a020f3b3253046adf0bf23335"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/ObjectiveC.cs",
+      "sha256": "4adeaad8682146c470db6143e5fda87bd5490548b3fcb34fde8f81c42ea2f373"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/OpenHelper.cs",
+      "sha256": "5e34100f43b7bc1ffbe91ad8d5692e56fe0dfc1f3fc017a44976bf0232852035"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/Patterns.cs",
+      "sha256": "294bd8c05ee37839db06d9bcab0cb3110352d26b771de27885e1310343c5eeb1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/RefEvent.cs",
+      "sha256": "f8debda9f45c18bc49ac204e2dbfc208ef0dffda5276bfef3bee57979df17647"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Helpers/RunningPlatform.cs",
+      "sha256": "df73d11543e453dbd301c888d156ac233f7441e01a097f7095c812cc52f78f9c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Formatters/DefaultLogFormatter.cs",
+      "sha256": "28d253951f5c9c4413b18e90f908219d513e52d99019a7189b1f5657db4b969a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Formatters/DynamicObjectFormatter.cs",
+      "sha256": "b193b40c8ac6626e8601e896fb26b1cfd5906f9d796078653f68c594006506ce"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Formatters/ILogFormatter.cs",
+      "sha256": "060d81c1e13dd00709a4aa0a363377e5458010cc4bd4d339992fbb03cb7ef8b8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/LogClass.cs",
+      "sha256": "bf6bb6167c5cafb112d13b1f58fb721b0eba420bea4cd6bbf11d833344a361df"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/LogEventArgs.cs",
+      "sha256": "a1f704d84ab43770c41edf2896f56744c9e013f49f95b37e8ebfcab3192387c4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/LogLevel.cs",
+      "sha256": "a347ef132c843fbc40b7f3b2b6de1aad73673fb992a099aecd08a484a473fc0d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Logger.cs",
+      "sha256": "38a66a846cc81926c6df53b514728751b8fbaa6e136095663576a76adfbdfd94"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Targets/AsyncLogTargetWrapper.cs",
+      "sha256": "b5d8baa962d3c2c18894051675fb89c04d347046038d4dd85b32323222b821f4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Targets/ConsoleLogTarget.cs",
+      "sha256": "10d0e493ac3845a774ef3132f0b49311652ff2df16c18dfb0d7ef262ad9fdbff"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Targets/FileLogTarget.cs",
+      "sha256": "a3b34fdce23161b977fe96980c104d7ea893025b5fd448f68dd4f48988ecbcb4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/Targets/ILogTarget.cs",
+      "sha256": "a6795467806d1860516e5a513ca7c72dcc00698fdeae187037bb19ac8dac0b60"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Logging/XCIFileTrimmerLog.cs",
+      "sha256": "7e8f379d9f404e769fccaa855bc59e19bc7bd3aa6f107408e60b2edc37c95ea8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/ArrayPtr.cs",
+      "sha256": "984bed20635b52b50bc563235aeaa75c774035d8b143cc4d7bcc14c45bf1468d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/Box.cs",
+      "sha256": "de383d0ff321e2d6d0af5e9818971f4ae3d5c6b0ef76c0755ffa88d6bdb0f95b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/IArray.cs",
+      "sha256": "0b4ba835fe89f680b0e4faff63e2f736727647a68a32f37d6ee0b193498c563b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/MemoryOwner.cs",
+      "sha256": "28de9f4232b06c52a836a41f8c3a63c00f4178dcc12a2d5a5e3f53c5d7403054"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/MemoryStreamManager.cs",
+      "sha256": "9570898385eca429b43d038f489467ddc343674b6e343fbc34bc587e77389bab"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/PartialUnmaps/NativeReaderWriterLock.cs",
+      "sha256": "1af4728ae0b92a234ebe1a868b535fce42c5986395423aa82e78bfbb1cbc9d3b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/PartialUnmaps/PartialUnmapHelpers.cs",
+      "sha256": "435f6e2a23674156650ba8111aa72e384907b575c793822c62b3d36dfd270424"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/PartialUnmaps/PartialUnmapState.cs",
+      "sha256": "b0183ba188b438fb83701028f20aa3449dc7afa4deb2a2fcc158d386e589cf08"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/PartialUnmaps/ThreadLocalMap.cs",
+      "sha256": "c178bde480c0e19e867cda63089b12c3767425ad697b3ddb084a00f25a7b2b7d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/Ptr.cs",
+      "sha256": "884c9c585475bf4f8b25099825517433879369e8ead10e74e57447800c0e7bca"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/SpanOwner.cs",
+      "sha256": "04e4c340e3e14d784a9bbdcfc4b351e001ad87df6da1a97df967daebdaa41018"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/SpanReader.cs",
+      "sha256": "dc6e92fb13b48ab92d0f2e15e9f62c64fa25f962800572cf5c50c12b5bb48638"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/SpanWriter.cs",
+      "sha256": "8cc04df39bba1c8ea6915bad9c3315d3c719be979f2219bbd9b5c2a4c0968197"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/StructArrayHelpers.cs",
+      "sha256": "ee9871e0099b206b7306214402b7241cc61d22632e5709708122f581b2d7074a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Memory/StructByteArrayHelpers.cs",
+      "sha256": "1629129716d567cf606233fdefca78d03e83f4d97fa993823913d24457f83d6f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PerformanceCounter.cs",
+      "sha256": "2352547efbc4637d21758ad70079001e1be4f83c379e2aff458c0a112e4cb55a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Pools/ObjectPool.cs",
+      "sha256": "f3a449f027d1a78831badcc565293763cd4eb51a0f2fe9219778c53f5f2ea4de"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Pools/SharedPools.cs",
+      "sha256": "419adcc9ce0d38b5dd2a854e8eb8bb728768a499adae605bb69151b289d4e88c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Pools/ThreadStaticArray.cs",
+      "sha256": "0e464d12967dcd20eae785d7a5b6e5439aa0b88ee9b5207f278773504b60ada4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/IPreciseSleepEvent.cs",
+      "sha256": "c04ef0310b05cbba344417cfe129c01093a5cd8bf1835d3b9f563e1d9e2189f7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/Nanosleep.cs",
+      "sha256": "af415d0b6c797ed05e5eb6a970af3eb4046f6052be07f1dc3e11a1b03f0e5215"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/NanosleepEvent.cs",
+      "sha256": "25fa8b251def6c37e74efe0b3818c29043770fcd4079d5fab0dcc0426f3d7ef6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/NanosleepPool.cs",
+      "sha256": "8129273336c9254952b981dcd98a77bb8e8ed8f107ccadd7d3d2b225ff964dbf"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/PreciseSleepHelper.cs",
+      "sha256": "7bbb2e800017795fb6a71e2790c57673ad80f40adbbb7bc3d425e033ba402c0d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/SleepEvent.cs",
+      "sha256": "8c6819b3aaf5f3273e78d90af1797085a163de4d9d39b5520a4823a394b7980e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/WindowsGranularTimer.cs",
+      "sha256": "c5bf41d88e824dad6ba8782432d62363469c12f6810f08c178df16b53b73abb7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/PreciseSleep/WindowsSleepEvent.cs",
+      "sha256": "15caa3d67f2a0639780d786dd95dd71178c23b1a358466c9b1178dd6a9aa11d7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/ReactiveObject.cs",
+      "sha256": "99a93e893e3d889acbc3922601a6c3928927203d42a5539ccecd32a44759cae9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/ReleaseInformation.cs",
+      "sha256": "0503c14251dd91e22d3c55ca3eb0874b6d70e43e5c69720287429377ad2b51df"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Ryujinx.Common.csproj",
+      "sha256": "875e6e55f9f4fce53453bced2a6aed54ab8dbd0dc6b499bed94c0720c6b955a1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/RyujinxException.cs",
+      "sha256": "96f0623f241d87693a37c4a2eb6dd161d4804f814706d296871f2408e09eeb5e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/SharedConstants.cs",
+      "sha256": "ff1f5c955e514c0d50460bd8903f12796cf71e4f7ce07367673df9fb9bf5d934"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/SystemInterop/DisplaySleep.cs",
+      "sha256": "407e1fab01a4b006b3663093f976a4b01c65742a9a5f8b80e945705ef45974f8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/SystemInterop/ForceDpiAware.cs",
+      "sha256": "663a764d3facc3b8baac62ef5de16fa8a22d7704132c7e8186dbed8e832528ad"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/SystemInterop/GdiPlusHelper.cs",
+      "sha256": "91b12bb5bddb877ef48567485560a8984196b8a28ace82aa25a4898ea3ade927"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/SystemInterop/StdErrAdapter.cs",
+      "sha256": "fbd21fed5a7a17395f3bf21247dc44f47df66757dcd10cb55eaf8574dab2a6fd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/SystemInterop/WindowsMultimediaTimerResolution.cs",
+      "sha256": "ee16db1674f94e792f8cd01bffd967efec907635a7c760de6d15a9bbb7ad33c8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/TitleIDs.cs",
+      "sha256": "22b44e29f7a0f4a933f1069f2fe6ffd26e01d1e3905f1409bdcc496ed79dd7f2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/UI/UserError.cs",
+      "sha256": "4043be542542633457e8c6204b29441d4d0683d009aa90faad2fbde173ff758a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/BitUtils.cs",
+      "sha256": "3f33297b391f95cfba6d3ec848b69f94534848b74f919310181e0a51eb450261"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/BitfieldExtensions.cs",
+      "sha256": "182a82cd9f2ec6a43cd965d6c040d2bb8ff09fe0b9d39efb94f60184081cdee9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/Buffers.cs",
+      "sha256": "0628ee2f91b828ddc66d63912aef87e68ae84cda464fcc5ba22f2f9410698028"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/CommonJsonContext.cs",
+      "sha256": "624f5034f5ca12b32cc806642459ba67514b77ea37b399565d858516598ae45c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/EmbeddedResources.cs",
+      "sha256": "d955cba4e80302d01cfc67ac6b57d4885ca106b74d93127ad18bba242437b91e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/FileSystemUtils.cs",
+      "sha256": "60cd8f034cfc48e59ab8c8252b938248e5bb9653d57779e6f47f4fb2a6d09d3d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/HexUtils.cs",
+      "sha256": "4ee6c0e8c226bfc517c2442ff42401e25295d6fde4d4f109ddb77383b0303240"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/JsonHelper.cs",
+      "sha256": "d42a9fdc1fa7bbd085bd3c0e84c26a3c86c30c37a83160a92db3043d5f3fdba2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/MessagePackObjectFormatter.cs",
+      "sha256": "895860f52031bcd6dad6a8c744a27befba1fe825e8467f577a289cad76043a5f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/NetworkHelpers.cs",
+      "sha256": "1260bc2851107eef8459669c93354b25da12cc88ee1d077b8d6d7675708ee09d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/OsUtils.cs",
+      "sha256": "e75d4f0c62a9298b098e009d2d596805735d21b7b731076e9d4ba3210077d48b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/Rainbow.cs",
+      "sha256": "a9df92f5d6ef292f82063d26d21670c502e9598f6c89792ecbcce1aba9b0375d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/SpanHelpers.cs",
+      "sha256": "fc5c163542e440cc72d744f63d1b9faa9445a4ff1af797d47e31008efadb1821"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/StreamUtils.cs",
+      "sha256": "69413ec40ccec9ef38084c55efe419ce2b8ffed6bdb22e77c8524afe5f6155be"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/UInt128Utils.cs",
+      "sha256": "63fcc13db4c942a4abcea6e5995c60318e2af79af5a2aa7380974d00ddbd0887"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Common/Utilities/XCIFileTrimmer.cs",
+      "sha256": "247b646ceb698e6416f4bdb011d683b146a7f7a6b7b0469506230a33d9fadfdd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/AlphaTestOp.cs",
+      "sha256": "39d027f1dcd3d6936411edf7c4f512be7979140e92de9c84a507bb57e471341a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/AttributeType.cs",
+      "sha256": "3d4cbabfa22b5ef7e645967ce292948c9061c4ec03334f3e4abfc0621407db60"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/BufferDescriptor.cs",
+      "sha256": "db6e5f75da8cba2b911a54a48e8b7ce7e9842a715c0c3d88c684dbf36a6c0c16"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/BufferUsageFlags.cs",
+      "sha256": "e02fbe338d658331ddccd46181c65f9cb6b1c89043c8fd027795cc18641e233f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/CodeGenParameters.cs",
+      "sha256": "878f3b1d449dbe2c7d610b8d1039ba605a25a6b38b80c5cf27293c36ca52dd95"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/CodeGenContext.cs",
+      "sha256": "4743f8ffbbd5b3e94267540d8be41f235f18a023c112d10bdd87505b559df9ae"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Declarations.cs",
+      "sha256": "ffda44c54eb7c503b03d90aa9708c0f661b399fc2ce98f6af74bde307b372df0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/DefaultNames.cs",
+      "sha256": "a620edcb17a429e9fe126baadb098135855ce5e277aa5e5dc912c6c4e3ebd60f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/GlslGenerator.cs",
+      "sha256": "b00e56eda18b8767da0c15c7f4abf57aa3d3a2883726cc8b6496124ee8d79791"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/HelperFunctions/HelperFunctionNames.cs",
+      "sha256": "25a1ab3fa91b4f6e3073fdffc6b714b8db2b7740d0a42063028ea9e9df5cd646"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGen.cs",
+      "sha256": "8336af9df244ac7d674e16bfac337ccfba6f9394c036fac3499e1ac1a0876ab0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenBallot.cs",
+      "sha256": "50fb4a1b8a3422c225830c8d64948f54c7ae5779ace22862bc5aecf7709a66e4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenCall.cs",
+      "sha256": "e97fe36de9c26a6143be7daac67e5f5c0552e14469b01d76d642c07a8e204e63"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenFSI.cs",
+      "sha256": "ff93f2991969ce0eadbe70dfc9ec68568792a10022030d9de5c772cb010ebd2f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenHelper.cs",
+      "sha256": "43712b6e26ad133dbaaf7f8f36add7660c099038ac6c5b66a275af4e8b73ad95"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenMemory.cs",
+      "sha256": "d4daf05c591b97f414554976de39062bf38b997bd92bdb0eb2d6c90ff4ba50f9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenPacking.cs",
+      "sha256": "6638d944c53fd3a481d5bec94803c338a5ed67e444f2cf431c20b3836ea18d55"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenShuffle.cs",
+      "sha256": "7770f7e7ef02fa2d8dba813a6d5dce6af7c61a579384c92e4cfb690db47eb8ac"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstGenVector.cs",
+      "sha256": "f8a7958872ecaf51cc8e8eb97d98ff997e22ffd67b314741a826a2d833b88109"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstInfo.cs",
+      "sha256": "1d1788bd30679eb896c31013c469ddc98f7b521d4c5f1d2724ead8cd13b2a75e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/InstType.cs",
+      "sha256": "2bc855bae537f13cc79e22165fb8799ffacd646c91d6b4539cd87e2a3befe704"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/Instructions/IoMap.cs",
+      "sha256": "dcf94e6bcc8f30405012422a5fdff90d7540d5574538a213c6622088517dfbda"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/NumberFormatter.cs",
+      "sha256": "b9432d275e617779780a429c69207bd56bbc87c0cb22b698808fcfceda85865e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/OperandManager.cs",
+      "sha256": "ff203c0c196eee4f2534ca011b87b5f159e156594f2ba8c40490174e01ed4b22"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Glsl/TypeConversion.cs",
+      "sha256": "8a18ffb5e94c48df01a9756f5eb89e7ee2279a7076081d71493c6b5c57cc98bd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/CodeGenContext.cs",
+      "sha256": "db8a1b1b5e96daddf8c3f5f016a9044100684b75dde7a2ac4c710f78a033d0ac"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/Declarations.cs",
+      "sha256": "d372952c3151ab8ff596d74c7564e46157d56e7814b081115161451c8ff7d513"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/EnumConversion.cs",
+      "sha256": "ae7cef29d218a116fe335b77e4a6769745fe1c6a75aa1e7903d83c6c2df331bd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/ImageDeclaration.cs",
+      "sha256": "bc3afc38536e1be60e3de8c8fab67163fe17d2cb3566cd8906f668294ad0d9b0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/Instructions.cs",
+      "sha256": "271f55937c27fd4ac5f85c98cbaeeb3a78b87788b1d662f3e771a1e342bb3763"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/IoMap.cs",
+      "sha256": "88c3c21c294b0dfe060a351ae8535485687b266ffc45fa148576f72529356193"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/OperationResult.cs",
+      "sha256": "98c81ffcc10ee2f90e12052a62ffab23deee65472e4131f243ea6795b140df44"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SamplerDeclaration.cs",
+      "sha256": "7dc23e1f5184b3864c5b0268cee0f3364c79e169a0b777a6283bc90a0fe24b4e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SpirvDelegates.cs",
+      "sha256": "cc46a3bf06671fffa7e3606e11bde1aa2ab0c2ee332b25b0d05231560124c4c3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SpirvGenerator.cs",
+      "sha256": "44886a62e980a4193b9801c995a899e068979cc06b04ae866e2ce239d0d7964b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Constants.cs",
+      "sha256": "1041aeb3fc09574b86adb4b725fab7bdcb8daf89d2a6e9e827331211c07a5ed9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/Block.cs",
+      "sha256": "554b60321e3b5d09343ec3e7a3f7b0c516614cae128669489a7c01c32c896413"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/DecodedFunction.cs",
+      "sha256": "3a8d907bbc0185282e2f166542b57e6878575649be2c44a4e65cc1ce2ee722c9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/DecodedProgram.cs",
+      "sha256": "67e63657c8b5b49e1859935c6aaa71ee7bfadf96c4a6cb449be012619c53631f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/Decoder.cs",
+      "sha256": "699049edb12f9042f0697d8b0b94e4683e00b83adac5b2c31c2088d1aca99dc2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/FunctionType.cs",
+      "sha256": "c2417f5d78a5a9bfcccaf9322a73ec2cbda6c1f201860cb0f4b076460b4f73b9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/InstDecoders.cs",
+      "sha256": "f217076b3878a9ed676e238373cb3d21154fcc99aa9a75ca4ba5f98948493f9e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/InstName.cs",
+      "sha256": "20c1c2e313d8dba3d71f5e2e2bd5f6741ac758c4f70071ae728727a93800b03f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/InstOp.cs",
+      "sha256": "6bf1907e9bc6a2c7af203b784d1ae00461f4db98b548cdf90edcd42d311634d6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/InstProps.cs",
+      "sha256": "db17a53d511e0c989b97ea75d3a9b6d9f2d305a23178aade4530a248e445cccb"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/InstTable.cs",
+      "sha256": "dcfcb9b8fba9c3626a2865f29e95336792bc9133c1785839f222582cdd23a35f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/Register.cs",
+      "sha256": "32642fd88b840f9f32ec421733961a6aa641080aa4a19a678f586a87e024f729"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/RegisterConsts.cs",
+      "sha256": "d9495bce7ccc8c69b7e170ded048ecb1b3ca10bd9566ca0db05e9ec2bf1323a4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Decoders/RegisterType.cs",
+      "sha256": "e36ae0268f0da18b8bb11b3fcf012c039652d996a6d5d77f9b770d924766130d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/GpuGraphicsState.cs",
+      "sha256": "e231fadab19e0002c15738896c5d4d77e81fe46e0db6b4d93564a2493f89162b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IGpuAccessor.cs",
+      "sha256": "bff9b5b10294b4f9742d95462d879c08c40c1eee225e79547e0c4b662b4a9bb3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/ILogger.cs",
+      "sha256": "245c51326f614156e6694e0b2477d7a53f1ebaf2ba0f053df34804c53a19d498"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/InputTopology.cs",
+      "sha256": "452ece086269573775a590793c066e0ac0992f4ab2195507344f4042aeb9e17b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/AttributeMap.cs",
+      "sha256": "2868d45e4996ff0eea1f9c7bf7146641e52b70899ee4b3bd763c1f4cbe72e255"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmit.cs",
+      "sha256": "a1f5ff712176d6e6f71968be04226efd20313e6883ccf624102916e61d8a2c4c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitAluHelper.cs",
+      "sha256": "08d172ecfb7fae05780b678a2336a5475fdbe8d0486ca32899090477cf5d6068"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitAttribute.cs",
+      "sha256": "58948c48aa3abdef7f0ad5195acdfbf7df4e9e943f325bdf16d169499011637a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitBarrier.cs",
+      "sha256": "fa25a3abc08088fa652e713091d420a5050c73616f52141e9e7af19de9103d55"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitBitfield.cs",
+      "sha256": "53315251345b91deb0f6b094cc1cf0d343b0169d9a10573010cc0da96deed270"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitConditionCode.cs",
+      "sha256": "03fcbb96a26e8b4c209d89f82d96b7779e93e31cf677607a88f4be6481c7f1e4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitConversion.cs",
+      "sha256": "baa2d80b81846772ee0595c70ae44b6c0256752e35b06dc1b023add2a69ab3fb"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitFloatArithmetic.cs",
+      "sha256": "1e4d554dc3c6f068e722033a375ce1de36d9b2b5cee56867dbb10b3e148096e5"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitFloatComparison.cs",
+      "sha256": "64f087436cbabf08134cc7ee018ec0d252f6af6f8d41273193af26bce37b15cb"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitFloatMinMax.cs",
+      "sha256": "f1c56dc651ddf3b8f7f8c9a5cf99320cd9811bb61a7eb1cfbfd406dae0b26e08"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitFlowControl.cs",
+      "sha256": "a05a637abf3d7c41adfcfdb84bae8d3e9d58c51e04d8e82af18d56f21d49c401"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitHelper.cs",
+      "sha256": "2c7b3c3b0651d2232c9f1f2f126ca923ae5b898d0ac623c3a0d2c7a2f1503d02"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitIntegerArithmetic.cs",
+      "sha256": "11c2e58c7b2390c6d3b87caa3cd3cc17a65b3471933a4609b0aff703ffd40632"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitIntegerComparison.cs",
+      "sha256": "ee1eb5105f2b9110e3f99e436ca6567bccfc388f004e09a024c8fd1399e3d8a5"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitIntegerLogical.cs",
+      "sha256": "6e5c1b20c2779a6aec237fb527f7a2b90f55edad9bbba2a6b94a4cc67c27df00"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitIntegerMinMax.cs",
+      "sha256": "7aebb95cc968fe1a6e13bebf89033c6dc7c21dcef91fff25567ce51cedc6bff5"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitMemory.cs",
+      "sha256": "5ad31e57c329960145e4d9681f1dbc15fcc4b3096382e436eb8f9831324301f2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitMove.cs",
+      "sha256": "a25717209451d928fe7735503bc5512f146a4917b4e629e7ae2eff150926f7dc"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitMultifunction.cs",
+      "sha256": "dac23a91a76af85d172b6efa095ec59a7978fd310b8de60b465e5c4b2b6895cc"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitNop.cs",
+      "sha256": "f806f9b3c9ef4a7feee828e00c3efe4a86984ebbc4e9a9a2e616dd4dd1a03ba7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitPredicate.cs",
+      "sha256": "b7c0793484c997ef9e5324a6bec6651982a339d62666e48cfec238bb2dc57019"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitShift.cs",
+      "sha256": "85bcbf259052b35377e934eb162412e5f01687ae48e0fe510cac730967b37c9f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitSurface.cs",
+      "sha256": "e62e8ece1cbda09e64f69baa17387cce48c3a724960bef63344c88b542b8e58f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitTexture.cs",
+      "sha256": "54febdae0cff25561b3d96d72c10225ccb071f3c4831b73d615fb33ab0e42e14"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitVideoArithmetic.cs",
+      "sha256": "a2dc7d79d645b42da133552ebf9d44bb2989d05098fb3e222abe52d20b6e548a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitVideoMinMax.cs",
+      "sha256": "7e81865b226ac968a924ff6936846a5169a29c26df4c1f634ca2fdf249b3c87a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitWarp.cs",
+      "sha256": "1e7a5705759842f895915d90d26d26f0fccab202f12dfd5c30246815dc3758fe"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/InstEmitter.cs",
+      "sha256": "0772b825b20c739d1ee990cd191f9c267ecd72f2010e018506533226f020ef02"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Instructions/Lop3Expression.cs",
+      "sha256": "dad4962501e8048a8cd7da4799a56cac6e7d8aefe33452c2c00fa5e2f07feb06"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/BasicBlock.cs",
+      "sha256": "282e347df3155609bf80e5bc612e7988845deeebf96bf2fd52694b6fbbc91eb9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/CommentNode.cs",
+      "sha256": "5c12ce3f08736e3e57760ed215f4dda414bcde9c17c196b6cba38e546a9d437a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/Function.cs",
+      "sha256": "28ed4985efbe31df42f52dabb5cec333727ae31e7f8ac2e93573bf7994913dad"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/INode.cs",
+      "sha256": "67a5223fdd6d3c465e2c6cab91b5caf3dad93c0856015ca1444632413c2aa93f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/Instruction.cs",
+      "sha256": "9493d26afd4943462d12e0f5fff8dce5569d0a06776e4d504f6322d8b335443e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/IoVariable.cs",
+      "sha256": "a01c7fb71efc06f479a7fedefa3086d34988516146f0e28474aa001c8a0850d0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/IrConsts.cs",
+      "sha256": "57dbca01e0d4e81d23d3ce398ff90c79fb1548afad5c23a5c4cac55f4d56517e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/Operand.cs",
+      "sha256": "6d663e822235789cf7460fe6ae5532b1c2fd53346dfd7b53a0385b3e85880ab1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/OperandHelper.cs",
+      "sha256": "d00789b33f4f45b21d3d6f3c00d8c299fd23b565297904f18d278bd843691372"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/OperandType.cs",
+      "sha256": "ad0650f23e2d2abff90fcfbd7e55e301643f7ffea8e075c76c5a8278d5aaf25f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/Operation.cs",
+      "sha256": "a3a4a47a9fe8feb2c63fba8357d2aa0cf0dc090741c584fa2695bab77750aa8a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/PhiNode.cs",
+      "sha256": "1602ceeb4116b1de38a1503d36e78220df22eedc78423131a500d1f800e5d182"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/StorageKind.cs",
+      "sha256": "19e3cbe58df5729f83deb27fb62a8f5163adf7108786b0a85fa471da864c090d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/TextureFlags.cs",
+      "sha256": "ba4e8b963faada4dde765ba17694d5af6466f68bc34e4dc68bf7f685fe4f1add"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/IntermediateRepresentation/TextureOperation.cs",
+      "sha256": "265ff271a4843ce36b484f471fd19005fa68b3b7caf60459e1ba5d36ff92119c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/OutputTopology.cs",
+      "sha256": "a288af1c23a7b9c52749778e27245b8fd2d10d34036c2008645289ab23aabe49"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/ResourceReservationCounts.cs",
+      "sha256": "72bebe717cd234bb6d50b26fa61d383f40afe5e8ae151d6f649767a844fc3af1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Ryujinx.Graphics.Shader.csproj",
+      "sha256": "fe7c06634ff782ad3f4721e0f9cbf737244446f4c9455bc9489fa5a26e3ce012"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/SamplerType.cs",
+      "sha256": "37ea0446fac9f1d8bc500f7e06e2b71bbd643969535330e0fb98104d179f962b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/SetBindingPair.cs",
+      "sha256": "8808ad2075e0a574afb96fd2df8209a0dd8f9a11ac8af29528514e89860fa85c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/ShaderProgram.cs",
+      "sha256": "44321a8b8f46db602a7b552d18b179896e587ef0b1939381517abef1d265214c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/ShaderProgramInfo.cs",
+      "sha256": "d687002287b46240375a234dea9275980fb6566955c27696db6254748f737668"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/ShaderStage.cs",
+      "sha256": "bbf921732d94ce25c928a9e7ea955bcb60e26245b150046869f939940e2a25d8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstAssignment.cs",
+      "sha256": "7a6505fe566fa653d1215ee4c18ac4870ac5e2e7ed72c01b7018abd73a786318"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstBlock.cs",
+      "sha256": "5c96f4a40f6825c39557838a82e2e78fe0a2d49362ced5ffc5a0ea941c943c72"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstBlockType.cs",
+      "sha256": "52bcd07c80afe49fdc9e4ab08ae09fe66f9bbd982647c74daad8675f7fdc8ffc"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstBlockVisitor.cs",
+      "sha256": "d380b838ec5ac585de4ed441c9ea5df5f2f742c6aa8f342e710dd7764be58a9c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstComment.cs",
+      "sha256": "abcc88a42d63da6c32bc5ef9e3756d89c02a3164cf19ad617696ea5cbb6a12d4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstHelper.cs",
+      "sha256": "1304daedadbfef0e6433070fae0838564bb6bb13df6b3779080ae4922f5fca37"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstNode.cs",
+      "sha256": "e08a57da34e2f841399ea1ff6494cea1ebea16ffb7f9e30e1351dba89d033ea3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstOperand.cs",
+      "sha256": "5fea0cae650158d44adad9809474ea8f4900ea799942a852ee84b01aab49bc5f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstOperation.cs",
+      "sha256": "58630ed338ae2df8de55289d24e8469b5794d6088399d427d629446f82438f27"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstOptimizer.cs",
+      "sha256": "56e7d01536e3d03c5f3de52a3a0b870212d97e385b13e172fcf8394af657e6a2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/AstTextureOperation.cs",
+      "sha256": "0dd05f713167bc2949240abc57b843bca7604cc24def2562df4ce341ed88753b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/BufferDefinition.cs",
+      "sha256": "77daf4a3eb287167f49ec38320260049883d2b92fa5d36f6c95d3a403ce285dd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/BufferLayout.cs",
+      "sha256": "9f8433c00b4fedf77074e04839a0c4bc81c134483ef7ff169d40c89137aa2181"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/GotoElimination.cs",
+      "sha256": "f1c96eeeb6c39a053331d09b19ccff6fef4a87496647f57f8d2a58d0dacc7131"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/GotoStatement.cs",
+      "sha256": "80e6dc91dc9f08bd7dccc5be4302ee2f2fd454da517d018d9ae997a35b09de9c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/HelperFunctionsMask.cs",
+      "sha256": "fc96b24ca138122f38e1cd6bedfaca8f2036833f7f51d55c48b858061d8d8eb6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/IAstNode.cs",
+      "sha256": "e4b704ae1946e0dc914553a94bbecc31a7566854db323023488efcb9d79484db"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/InstructionInfo.cs",
+      "sha256": "9f8cbe1d22ee8c4cdf5c0b871981873906d53c0a507ee8f7edee82f54794c5a8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/IoDefinition.cs",
+      "sha256": "f1577af6848212cf4e5497206dba1c0ca4b81f833c0174b2346e21a23a1035fd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/MemoryDefinition.cs",
+      "sha256": "5f721b4b3ff304e56c354e7cc07c065d5db88803857534a37971f8741d8f90a7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/OperandInfo.cs",
+      "sha256": "97900a93d45fb12db773b63f6279eb7a4ceaae1a9e6e90fdc4fb8d2639cc0c6a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/PhiFunctions.cs",
+      "sha256": "6b8dbb1d780cd77eb9cda51fa98058c556bf20ea5a71b5c6b477c838b8fde688"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/ShaderProperties.cs",
+      "sha256": "7238598605f704eece3c1a891a4fa5c07f01c9ae3c57ca524270e367f23d7fe6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/StructureType.cs",
+      "sha256": "f2951740ba3090ea47a68041daf7125fd235ec4347ff0e1f11d1aae7e998252f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/StructuredFunction.cs",
+      "sha256": "f02ad545d20bc6d336a88f4f018839f3c64452f8d9b6df48cea13bd6e311abb3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/StructuredProgram.cs",
+      "sha256": "38587893a0230f6729143aa9d897ca83998f9b185fd8faa155580392c2ad4f35"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/StructuredProgramContext.cs",
+      "sha256": "80a14edaeacdb915e37115451361ca0353f917ff65d33b0604c638f80bba8983"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/StructuredProgramInfo.cs",
+      "sha256": "aa16beea89e0cbe3b63d0ea5ac9a2404453206865bd36fa9fde2035d3aee8b58"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/StructuredIr/TextureDefinition.cs",
+      "sha256": "1ff93237e99ba7dbe282d1974858dadbc09dd211d9b3730a5d58ca444e82fa3b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/SupportBuffer.cs",
+      "sha256": "c34c4a966fe2a2fd2867d35c28675a362a33e00640b53031523c3cbf179195ca"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/TessPatchType.cs",
+      "sha256": "e9ad3b354df7a60f3c4e77d68e7651d4e86f1cc5c92c8bc5dbb67da6b2c29751"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/TessSpacing.cs",
+      "sha256": "e76d96ecf795a69dae3d4e802f74e0c74e2f94e09cbc16e5b96fe499b843f201"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/TextureDescriptor.cs",
+      "sha256": "c8a051c23d0f957a1b31d937b038267479811b9f8e50935a88fbec3882b69afe"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/TextureFormat.cs",
+      "sha256": "be50c441ce53c81bc64008a88bc4d193d6b68fee81ba83ea11dab5a8e1b65218"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/TextureHandle.cs",
+      "sha256": "e72ac096d6dddcb57db0831fbf2e6d1269708f6e08446cc5f0ac5b9815c931d3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/TextureUsageFlags.cs",
+      "sha256": "4526e5f4fa048afdc1b7c3da31d4c4c89f32b52f75858a5676842774b1340c1d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/AggregateType.cs",
+      "sha256": "0dc4a1eca954c38efdd8c43f2db606803aa283af043f852f4c6251e047406eb7"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/AttributeConsts.cs",
+      "sha256": "fe14f9b58a0256ade65b1c4503205c8a7cd5d21b965ee189be4e01dc34523b74"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/AttributeUsage.cs",
+      "sha256": "0d4b6f35b79524a9c7e3e775cdb74005655b59eb9b8f99dbf8b6e03dd8e75259"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/ControlFlowGraph.cs",
+      "sha256": "a41e3f4e1b3fd45d3afd535f22a16d407c1337370fafc41e73cc407a3753fb2d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Dominance.cs",
+      "sha256": "3b27c330cdd5af10db5b027750be66e6a017951b0f0dc5e02e55109ace40a429"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/EmitterContext.cs",
+      "sha256": "09663ef32b645165d1603592f67e5ab41138f0f88ac249de070b3aa94f9f6cad"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/EmitterContextInsts.cs",
+      "sha256": "c1bf608891a27350423961755f6f7eb7efc8dfaf7f86dabe3bfd893e623f13b6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/FeatureFlags.cs",
+      "sha256": "6f2c2ab94575b2940a42c678bcb76f37875dc7616ee5cb39945135525b0e84c6"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/FunctionMatch.cs",
+      "sha256": "f5bb20c8bdb05d2f432de15908468bc2197a585339cc365940aea6b952d6357a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/HelperFunctionManager.cs",
+      "sha256": "cbbc0a485a23907932e1479cc094d92ec781dcecbcbb6cba534a284238ceb7c9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/HelperFunctionName.cs",
+      "sha256": "0ff978a8000b986953aa4138f8e50cac4e6d702dc9cb8081ce3b4658b335ceb1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/HostCapabilities.cs",
+      "sha256": "7e787d6311514adfbbc2f4f95044f1d7248f62f6d08431cff13703b9fc065b93"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/IoUsage.cs",
+      "sha256": "ec826cfa20ab4327f794fc3ab6e725165b408dc9e5229e4df3ef817a1052d307"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/BindlessElimination.cs",
+      "sha256": "3606cd5892168d916152ad302947158355b3cf3aaef03945c774a1802ea7750a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/BindlessToArray.cs",
+      "sha256": "b14c971e122e2d2d627d72cf3c5a2f2e791e494968d71694bdcf183098810d1c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/BranchElimination.cs",
+      "sha256": "e5a9ec80e83514cee54ed07bb200c36f6bd1bf4c02a13d75e5b02164a727d212"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/ConstantFolding.cs",
+      "sha256": "b508b607d6d00f28df0a57e183905b6f7dd07769dadd2635ab6b1f255f1fca63"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/DoubleToFloat.cs",
+      "sha256": "225d08884b38b28031cd8ed270326ca44bb72b39ee0d3c317732662563a2647e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/GlobalToStorage.cs",
+      "sha256": "5264b335281028b1719250f83105a75912d32608b17367e049b62052a8bda86f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/Optimizer.cs",
+      "sha256": "e26d1e133e118474988d1fb4aa4989465f38c3d6f86e7f644970f3c900157c55"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/Simplification.cs",
+      "sha256": "afd0edee38a8cde5a2abfb244fc027d5a10b56649aad2bf76730847e85c5de5d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/Utils.cs",
+      "sha256": "9f2adc5fe85f799ca95b22aaf35b27a1a2cb5e310bf698abbd2aa615fcb4bff5"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Optimizations/XmadOptimizer.cs",
+      "sha256": "e866ccfcf4cc89ef2f79f07b0f44803efafbab4313c05e5353c99d474ac4df95"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/RegisterUsage.cs",
+      "sha256": "5dfbeaf848eaf5c7e0471bec085c35730e2cf2e67dbd253f0cb853ff6c3e5f5e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/ResourceManager.cs",
+      "sha256": "35f9da40216adcad512d49b00ed329e03d10c421a5ab10459808daa2902f2620"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/ResourceReservations.cs",
+      "sha256": "ae08a2f8dc9a5e26a883571b54d4582dbc3e6b2f1b12d6fa5c583f4d4f4b09a0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/ShaderDefinitions.cs",
+      "sha256": "554c0565b1ef25089a93bf91fb8a176a3d08d7239e8a37a541ce897954a46c7b"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/ShaderHeader.cs",
+      "sha256": "0c8ba0600b5a557a29456170caf51b03ad953b5bbdebe65253dc673c01e111d0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Ssa.cs",
+      "sha256": "8533126b24070c555961bb72728ce5bba86ccf72b5d4bb7ef333b1736cf1449e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TargetApi.cs",
+      "sha256": "8ddb174b07322d80c411469b3930096f49f501c96ac9dce10f9fb96f6216665a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TargetLanguage.cs",
+      "sha256": "61d228af9ff28f0e22bf69280244c9d9499b662aca9d64811b4e7e496ae6dab9"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TransformContext.cs",
+      "sha256": "2ac1c88d6d9db01a228b82f9095db59d740d591b9d89f1ec2bd92865a01469b3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TransformFeedbackOutput.cs",
+      "sha256": "c190dd23d807d013347b7018543d1293544e429e9eb84032c1347ed91f4b28c0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/DrawParametersReplace.cs",
+      "sha256": "7332f163658fd1c3e13adc50237d207371972b733a6a5489dc7fbef01c14d269"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/ForcePreciseEnable.cs",
+      "sha256": "38ee7389d40d742a3540211aac955ab0dec5b6bb522f25a1fda82952597c69c8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/GeometryToCompute.cs",
+      "sha256": "407ac0f6e450288b0fbeb2794c242cbbdd2eede862579a580e24f3a1289a98d2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/ITransformPass.cs",
+      "sha256": "28ed1477ced191ebfadd9a123cc095796e8a5c0fe5e9d5bd6ddbfa762667b892"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/SharedAtomicSignedCas.cs",
+      "sha256": "5b8c476a863268202207f524abaedd5be1fd77cc243e1e1a2de38922ced1f972"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/SharedStoreSmallIntCas.cs",
+      "sha256": "635670f094e8677102a1f7758c11dd9d2961318ab64662bc2209fbdd0fb068c3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/ShufflePass.cs",
+      "sha256": "d72639e8c50d749d80e0b22591665a3e9b6ba780d99d029dfb0625335e79a3c5"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/TexturePass.cs",
+      "sha256": "f5925fe794e8ab02dc332c36fb583436d87a8630c98f7fa112e53972416625d2"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/TransformPasses.cs",
+      "sha256": "d433875bded694adff161c7c1d35a97715d7138062e1087faf8fd3c28ce49926"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/VectorComponentSelect.cs",
+      "sha256": "3b58a57ee2c1eb6fdc4510325293e8af8ad229854d58061290a56fb7f62bde34"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Transforms/VertexToCompute.cs",
+      "sha256": "22e0e3fe28ab3d6098857f872a5776a93177d56999107c0a9dc8754857296163"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TranslationFlags.cs",
+      "sha256": "16f4fc8b1202b4d504c5c9c1f4f3d639ec6dfa098fd784f8451302b5d766b223"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TranslationOptions.cs",
+      "sha256": "72f6f2c651ac79d7393f93e94840ed4aad03c406d62f62057dbaf375ce158b5f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/Translator.cs",
+      "sha256": "f0dc80aef0cf7e1e4dfb436e39a25134feb85eb85481d5ace1bae61e6132eb5e"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/Translation/TranslatorContext.cs",
+      "sha256": "57e842a2b4519ad4dfdaf2aca60dbda0d6424aec2a13c13532c2db1ea390c3b1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Ryujinx.Graphics.Shader/VertexInfoBuffer.cs",
+      "sha256": "aae42b60a56790648bdf40298e50afa7bed40da05ce296fbf0748d8c4648bd28"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/Autogenerated/CoreGrammar.cs",
+      "sha256": "d1b61ec90d6fcdf83c54b02e7d7192b48a0e15f319e1205f1c85d957d96aca1c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/Autogenerated/GlslStd450Grammar.cs",
+      "sha256": "702963d4457b4d7183ef328e4dd111773c1eec3af64e57f1d9cbf9683ccfc508"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/Autogenerated/OpenClGrammar.cs",
+      "sha256": "06b16b35fcd175e7273c37e3560cee694a20856e62f9fc007d88ba475f30c01a"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/ConstantKey.cs",
+      "sha256": "fdf212c24934612efd7e5b47cf94d8618561eb76fa58195ce3bb8d380ba4532f"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/DeterministicHashCode.cs",
+      "sha256": "14dba287fd4f951272fb45ae34e114bdedc049ccd425163e9f90b1deb6d63839"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/DeterministicStringKey.cs",
+      "sha256": "a09fd8305c113f320f7fd9451343d0449382b7c7c6dcba73b9deddb6c8ec50a0"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/GeneratorPool.cs",
+      "sha256": "2dac758a500b67d5f9a526d488eda3708985c8d42a561226e13e83eb5cb9fd9c"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/IOperand.cs",
+      "sha256": "1b3435e53b286cad99325a1417fd5668eac604a0ae856132f9008a2e459dd504"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/Instruction.cs",
+      "sha256": "d7e3f93669ebc1f14168744fd4e7416dccefd828fc90463a94bf1d475f9f23bc"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/InstructionOperands.cs",
+      "sha256": "6c5c602e2ebc4d926050d61fc17aff653d858d58a8563a5a41d47df36ac1b748"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/LICENSE",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/LiteralInteger.cs",
+      "sha256": "cd6e87def5fbb4417f1a4680fdcd7656174b11668c6b0a64e7570a382b641ecd"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/LiteralString.cs",
+      "sha256": "a1bdf42ab790783a2b860fd86f62c11748a5175bb5535b08b4ef965d998b94d4"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/Module.cs",
+      "sha256": "bcd13e6e535ba1e81c136c96a779d7f7b0d0728f4cc4939d56e86bcee16450e1"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/OperandType.cs",
+      "sha256": "c3e31e64d234c214c7209649d988d72e297a6213b61b9e6ae02d7f98951ed8d8"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/Spv.Generator.csproj",
+      "sha256": "77c182f8b6f75ec5894b5202d655cd78694c949a14862a4aead60e56513fa923"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/TypeDeclarationKey.cs",
+      "sha256": "5a28f3cc4b03404f6fb8aa1c8e882ceabcaba113bb7e053557e0972902712a0d"
+    },
+    {
+      "path": "tooling/ryujinx/src/Spv.Generator/spirv.cs",
+      "sha256": "edbe69718c6fd6fa9754fead258bef34d9ea6e93d8a3c2d8db8fdd4436bd831d"
+    },
+    {
+      "path": "tooling/totk_xlate/LICENSE",
+      "sha256": "5811600bb8fc4522d3310e8e0e637a1bb14b7c64412f8cfc6234872eb53129b9"
+    },
+    {
+      "path": "tooling/totk_xlate/Program.cs",
+      "sha256": "9e19a5a677851d6de66b84c378e33a85c8ce0a969ef244558e3899e98d49e2b7"
+    },
+    {
+      "path": "tooling/totk_xlate/Service.cs",
+      "sha256": "27f5da5be46c0da02325355adec292d5655241174bb5cf383a7a643d066af326"
+    },
+    {
+      "path": "tooling/totk_xlate/VertexCounterLowering.cs",
+      "sha256": "4321fb219bc0567d7e1b24b1aa02950b091f577e5713a82704a75bf9be50182e"
+    },
+    {
+      "path": "tooling/totk_xlate/publish_native.sh",
+      "sha256": "46aa53d06f39be03cdcf8b30700e44fb7391ebfad42561734fbd425a6ad60aad"
+    },
+    {
+      "path": "tooling/totk_xlate/totk_xlate.csproj",
+      "sha256": "cee5760b673729e2348b8df87c7a9f6c47530fadd9d9247d15f715312bb91288"
+    }
+  ]
+}
