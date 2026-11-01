@@ -1,6 +1,7 @@
 #include <jni.h>
 #include <android/native_window.h>
 #include <android/native_window_jni.h>
+#include <aaudio/AAudio.h>
 #define VK_USE_PLATFORM_ANDROID_KHR
 #include <vulkan/vulkan.h>
 
@@ -386,6 +387,35 @@ std::string probe_vulkan() {
     vkDestroySurfaceKHR(instance, surface, nullptr);
     vkDestroyInstance(instance, nullptr);
     return report.str();
+}
+
+
+std::string probe_aaudio() {
+    AAudioStreamBuilder* builder = nullptr;
+    aaudio_result_t result = AAudio_createStreamBuilder(&builder);
+    if (result != AAUDIO_OK || !builder)
+        return "AAudio builder unavailable (error " + std::to_string(result) + ").";
+    AAudioStreamBuilder_setDirection(builder, AAUDIO_DIRECTION_OUTPUT);
+    AAudioStreamBuilder_setFormat(builder, AAUDIO_FORMAT_PCM_FLOAT);
+    AAudioStreamBuilder_setChannelCount(builder, 2);
+    AAudioStreamBuilder_setSampleRate(builder, 48000);
+    AAudioStreamBuilder_setPerformanceMode(builder, AAUDIO_PERFORMANCE_MODE_LOW_LATENCY);
+    AAudioStream* stream = nullptr;
+    result = AAudioStreamBuilder_openStream(builder, &stream);
+    AAudioStreamBuilder_delete(builder);
+    if (result != AAUDIO_OK || !stream)
+        return "AAudio output open failed (error " + std::to_string(result) + ").";
+    const auto rate = AAudioStream_getSampleRate(stream);
+    const auto channels = AAudioStream_getChannelCount(stream);
+    const auto format = AAudioStream_getFormat(stream);
+    const auto burst = AAudioStream_getFramesPerBurst(stream);
+    const auto sharing = AAudioStream_getSharingMode(stream);
+    AAudioStream_close(stream);
+    return "AAudio output device: open/close OK\\n" +
+           std::to_string(rate) + " Hz, " + std::to_string(channels) +
+           " channels, format " + std::to_string(format) +
+           ", burst " + std::to_string(burst) +
+           ", sharing " + (sharing == AAUDIO_SHARING_MODE_EXCLUSIVE ? "exclusive" : "shared");
 }
 
 std::string surface_status() {
