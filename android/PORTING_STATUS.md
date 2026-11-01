@@ -26,7 +26,7 @@ Adding only an APK wrapper or changing compiler flags would therefore produce a 
 
 ## Immediate implementation order
 
-- [ ] Add Android Gradle/NDK application shell and ARM64 CI.
+- [x] Add Android Gradle/NDK application shell, JNI smoke-test app and ARM64 CI workflow (workflow has not yet been observed completing).
 - [ ] Add Android lifecycle/JNI frontend.
 - [ ] Introduce a renderer interface separating guest NVN calls from Metal-specific implementation.
 - [ ] Implement Vulkan backend and shader translation path.
