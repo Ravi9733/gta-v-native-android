@@ -23,3 +23,17 @@ Supply your own legally obtained game files and Apple signing configuration. Gam
 The host builds on [MacNativeGames](https://github.com/ly05010419/MacNativeGames), [D2R Mobile](https://github.com/jhaizhou-ops/d2r-mobile), [nxnative](https://github.com/seedds/nxnative) and the retained Ryujinx tooling subset. Original component notices are preserved; this collection has component-specific licensing. This is an unofficial community project.
 
 По-русски: экспериментальный нативный порт GTA V / GTA 5 для iPhone, iOS и Mac на ARM64 с Metal. Здесь исходники адаптации и инструменты сборки; стабильность и производительность ещё дорабатываются.
+
+
+## Android port status
+
+An ARM64 Android Gradle/NDK development shell is now present on the
+`android-port-foundation` branch. It includes a JNI smoke-test app and a
+GitHub Actions build workflow. **It is not a playable Android port yet**:
+the native guest runtime is not connected, the current NVN renderer is
+Metal-specific, and the Android Vulkan backend/platform services remain to
+be implemented.
+
+See [Android port notes](android/README.md),
+[verified blockers and architecture](android/PORTING_STATUS.md), and the
+[frontend/Vulkan contract](android/FRONTEND_AND_VULKAN_CONTRACT.md).
