@@ -1,12 +1,17 @@
 #include <jni.h>
+#include <android/native_window.h>
+#include <android/native_window_jni.h>
 #include <vulkan/vulkan.h>
 
 #include <cstdint>
+#include <mutex>
 #include <sstream>
 #include <string>
 #include <vector>
 
 namespace {
+std::mutex g_window_mutex;
+ANativeWindow* g_window = nullptr;
 
 std::string probe_vulkan() {
     VkApplicationInfo app_info{};
@@ -28,15 +33,14 @@ std::string probe_vulkan() {
                std::to_string(static_cast<int>(created)) + ").";
     }
 
-    uint32_t physical_count = 0;
-    VkResult result = vkEnumeratePhysicalDevices(instance, &physical_count, nullptr);
-    if (result != VK_SUCCESS || physical_count == 0) {
+    uint32_t count = 0;
+    VkResult result = vkEnumeratePhysicalDevices(instance, &count, nullptr);
+    if (result != VK_SUCCESS || count == 0) {
         vkDestroyInstance(instance, nullptr);
-        return "Vulkan is present, but no physical Vulkan GPU was enumerated.";
+        return "Vulkan is present, but no physical GPU was enumerated.";
     }
-
-    std::vector<VkPhysicalDevice> devices(physical_count);
-    result = vkEnumeratePhysicalDevices(instance, &physical_count, devices.data());
+    std::vector<VkPhysicalDevice> devices(count);
+    result = vkEnumeratePhysicalDevices(instance, &count, devices.data());
     if (result != VK_SUCCESS) {
         vkDestroyInstance(instance, nullptr);
         return "Vulkan GPU enumeration failed (VkResult " +
@@ -44,72 +48,73 @@ std::string probe_vulkan() {
     }
 
     std::ostringstream report;
-    report << "Vulkan instance: OK\n";
-    report << "Physical devices: " << physical_count << "\n";
-
-    bool found_graphics = false;
-    for (uint32_t index = 0; index < physical_count; ++index) {
+    report << "Vulkan instance: OK\nPhysical devices: " << count << "\n";
+    bool graphics_found = false;
+    for (uint32_t i = 0; i < count; ++i) {
         VkPhysicalDeviceProperties properties{};
-        vkGetPhysicalDeviceProperties(devices[index], &properties);
-
+        vkGetPhysicalDeviceProperties(devices[i], &properties);
         uint32_t queue_count = 0;
-        vkGetPhysicalDeviceQueueFamilyProperties(devices[index], &queue_count, nullptr);
+        vkGetPhysicalDeviceQueueFamilyProperties(devices[i], &queue_count, nullptr);
         std::vector<VkQueueFamilyProperties> queues(queue_count);
-        vkGetPhysicalDeviceQueueFamilyProperties(devices[index], &queue_count, queues.data());
-
-        int32_t graphics_family = -1;
+        vkGetPhysicalDeviceQueueFamilyProperties(devices[i], &queue_count, queues.data());
+        int graphics_family = -1;
         for (uint32_t q = 0; q < queue_count; ++q) {
-            if ((queues[q].queueFlags & VK_QUEUE_GRAPHICS_BIT) != 0 &&
-                queues[q].queueCount > 0) {
-                graphics_family = static_cast<int32_t>(q);
+            if (queues[q].queueCount && (queues[q].queueFlags & VK_QUEUE_GRAPHICS_BIT)) {
+                graphics_family = static_cast<int>(q);
                 break;
             }
         }
-
-        uint32_t extension_count = 0;
-        const VkResult ext_result = vkEnumerateDeviceExtensionProperties(
-            devices[index], nullptr, &extension_count, nullptr);
-        bool has_swapchain = false;
-        if (ext_result == VK_SUCCESS) {
-            std::vector<VkExtensionProperties> extensions(extension_count);
-            if (vkEnumerateDeviceExtensionProperties(
-                    devices[index], nullptr, &extension_count, extensions.data()) == VK_SUCCESS) {
-                for (const auto& extension : extensions) {
-                    if (std::string(extension.extensionName) == VK_KHR_SWAPCHAIN_EXTENSION_NAME) {
-                        has_swapchain = true;
+        uint32_t ext_count = 0;
+        bool swapchain = false;
+        if (vkEnumerateDeviceExtensionProperties(devices[i], nullptr, &ext_count, nullptr) == VK_SUCCESS) {
+            std::vector<VkExtensionProperties> exts(ext_count);
+            if (vkEnumerateDeviceExtensionProperties(devices[i], nullptr, &ext_count, exts.data()) == VK_SUCCESS) {
+                for (const auto& ext : exts) {
+                    if (std::string(ext.extensionName) == VK_KHR_SWAPCHAIN_EXTENSION_NAME) {
+                        swapchain = true;
                         break;
                     }
                 }
             }
         }
-
-        report << "\nGPU " << (index + 1) << ": " << properties.deviceName << "\n";
-        report << "Vulkan API: " << VK_VERSION_MAJOR(properties.apiVersion) << "."
+        report << "\nGPU " << (i + 1) << ": " << properties.deviceName << "\n"
+               << "Vulkan API: " << VK_VERSION_MAJOR(properties.apiVersion) << "."
                << VK_VERSION_MINOR(properties.apiVersion) << "."
-               << VK_VERSION_PATCH(properties.apiVersion) << "\n";
-        report << "Graphics queue: "
-               << (graphics_family >= 0 ? "available (family " +
-                    std::to_string(graphics_family) + ")" : "not found") << "\n";
-        report << "VK_KHR_swapchain: " << (has_swapchain ? "available" : "not available") << "\n";
-        found_graphics = found_graphics || graphics_family >= 0;
+               << VK_VERSION_PATCH(properties.apiVersion) << "\n"
+               << "Graphics queue: " << (graphics_family >= 0 ? "available" : "not found") << "\n"
+               << "VK_KHR_swapchain: " << (swapchain ? "available" : "not available") << "\n";
+        graphics_found |= graphics_family >= 0;
     }
-
     vkDestroyInstance(instance, nullptr);
-    report << "\nProbe only: no Android surface, Vulkan device, NVN renderer, or game runtime is connected.";
-    if (!found_graphics) {
-        report << "\nNo graphics-capable Vulkan queue was found.";
-    }
+    if (!graphics_found) report << "\nNo graphics-capable queue was found.";
     return report.str();
 }
 
+std::string surface_status() {
+    std::lock_guard<std::mutex> lock(g_window_mutex);
+    if (!g_window) return "Android native window: waiting for SurfaceView.";
+    return "Android native window: connected (" +
+           std::to_string(ANativeWindow_getWidth(g_window)) + " x " +
+           std::to_string(ANativeWindow_getHeight(g_window)) + ").";
+}
 }  // namespace
+
+extern "C" JNIEXPORT void JNICALL
+Java_org_macnativegames_gtavandroid_MainActivity_nativeSetSurface(
+    JNIEnv* env, jobject /* thiz */, jobject surface) {
+    ANativeWindow* next = surface ? ANativeWindow_fromSurface(env, surface) : nullptr;
+    std::lock_guard<std::mutex> lock(g_window_mutex);
+    if (g_window) ANativeWindow_release(g_window);
+    g_window = next;
+}
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_org_macnativegames_gtavandroid_MainActivity_nativePortStatus(
     JNIEnv* env, jobject /* thiz */) {
-    constexpr char kHeader[] =
+    const std::string status =
         "Android ARM64 native shell is active.\n"
-        "Game runtime is not connected.\n\n";
-    const std::string status = std::string(kHeader) + probe_vulkan();
+        "Game runtime is not connected.\n\n" +
+        surface_status() + "\n\n" + probe_vulkan() +
+        "\n\nProbe only: Vulkan surface/swapchain, NVN renderer, and GTA runtime are not connected.";
     return env->NewStringUTF(status.c_str());
 }
