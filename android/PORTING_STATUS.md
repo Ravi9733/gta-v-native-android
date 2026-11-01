@@ -2,9 +2,9 @@
 
 This directory is the Android-port work area for the native ARM64 GTA V host.
 
-## Important: current source is not Android-buildable yet
+## Important: original game host is not yet ported to Android
 
-The published host is an Apple-platform implementation, not a portable C/C++ app that can be repackaged. The current build recipes invoke `xcrun clang`, link Apple frameworks (Metal, MetalFX, UIKit/Cocoa, CoreVideo, AudioToolbox, GameController and others), and compile the NVN graphics implementation in `third_party/d2r_gfx/gfx/nvn/nvn_mtl.m`. There is no Android Gradle project, Android NDK target, Vulkan renderer, or Android frontend in the source snapshot.
+The published host is an Apple-platform implementation, not a portable C/C++ app that can be repackaged. The current build recipes invoke `xcrun clang`, link Apple frameworks (Metal, MetalFX, UIKit/Cocoa, CoreVideo, AudioToolbox, GameController and others), and compile the NVN graphics implementation in `third_party/d2r_gfx/gfx/nvn/nvn_mtl.m`. An Android Gradle/NDK shell now exists on `android-port-foundation`, but the original game runtime is still not connected to it and the Metal/NVN renderer has not been ported.
 
 Adding only an APK wrapper or changing compiler flags would therefore produce a non-working app. The Android port needs real platform and renderer work.
 
@@ -18,8 +18,8 @@ Adding only an APK wrapper or changing compiler flags would therefore produce a 
 
 ## Current verified baseline
 
-- Latest CI run `41268456183` completed successfully on 2026-11-01. It proves the ARM64 Android scaffold compiles and packages; it does **not** prove GTA V boots or renders.
-- Latest artifact: `gtav-android-port-scaffold-arm64` (1,055,274 bytes). This is a development scaffold, not a playable game APK.
+- CI run `41269040335` completed successfully on 2026-11-01 for commit `fd400435`. It proves the Vulkan swapchain test code compiles and packages; it does **not** prove GTA V boots or renders.
+- Latest artifact: `gtav-android-port-scaffold-arm64` (1,073,343 bytes). This is a development scaffold, not a playable game APK.
 
 
 - The repository is a fork of `slavich33/gta-v-native-ios`.
@@ -33,7 +33,7 @@ Adding only an APK wrapper or changing compiler flags would therefore produce a 
 - [x] Add Android Gradle/NDK application shell, JNI smoke-test app and ARM64 CI workflow (GitHub Actions run 41268456183 passed; ARM64 scaffold artifact uploaded).
 - [x] Add Android lifecycle/JNI frontend with SurfaceView and ANativeWindow ownership; CI passed on commit 81d253b.
 - [x] Add Vulkan instance + Android VkSurfaceKHR creation and graphics/present queue capability probe; CI passed on commit 1cae56b.
-- [ ] Create a Vulkan logical device and swapchain, then render/present a test frame.
+- [x] Create a Vulkan logical device and swapchain, record a clear render pass, and present a test frame (CI compile/package passed on `fd400435`; still needs physical-device runtime verification).
 - [ ] Introduce a renderer interface separating guest NVN calls from Metal-specific implementation.
 - [ ] Implement Vulkan backend and shader translation path.
 - [ ] Port audio, input and filesystem services.
