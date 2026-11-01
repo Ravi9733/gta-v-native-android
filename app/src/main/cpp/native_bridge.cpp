@@ -25,6 +25,9 @@ std::string probe_vulkan() {
     VkInstanceCreateInfo create_info{};
     create_info.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     create_info.pApplicationInfo = &app_info;
+    const char* instance_extensions[] = {VK_KHR_SURFACE_EXTENSION_NAME, VK_KHR_ANDROID_SURFACE_EXTENSION_NAME};
+    create_info.enabledExtensionCount = 2;
+    create_info.ppEnabledExtensionNames = instance_extensions;
 
     VkInstance instance = VK_NULL_HANDLE;
     const VkResult created = vkCreateInstance(&create_info, nullptr, &instance);
@@ -33,15 +36,36 @@ std::string probe_vulkan() {
                std::to_string(static_cast<int>(created)) + ").";
     }
 
+    ANativeWindow* window = nullptr;
+    {
+        std::lock_guard<std::mutex> lock(g_window_mutex);
+        if (g_window) { window = g_window; ANativeWindow_acquire(window); }
+    }
+    VkSurfaceKHR surface = VK_NULL_HANDLE;
+    if (window) {
+        VkAndroidSurfaceCreateInfoKHR surface_info{};
+        surface_info.sType = VK_STRUCTURE_TYPE_ANDROID_SURFACE_CREATE_INFO_KHR;
+        surface_info.window = window;
+        const VkResult surface_result = vkCreateAndroidSurfaceKHR(instance, &surface_info, nullptr, &surface);
+        ANativeWindow_release(window);
+        if (surface_result != VK_SUCCESS) {
+            vkDestroyInstance(instance, nullptr);
+            return "Android Vulkan surface creation failed (VkResult " +
+                   std::to_string(static_cast<int>(surface_result)) + ").";
+        }
+    }
+
     uint32_t count = 0;
     VkResult result = vkEnumeratePhysicalDevices(instance, &count, nullptr);
     if (result != VK_SUCCESS || count == 0) {
+        if (surface) vkDestroySurfaceKHR(instance, surface, nullptr);
         vkDestroyInstance(instance, nullptr);
         return "Vulkan is present, but no physical GPU was enumerated.";
     }
     std::vector<VkPhysicalDevice> devices(count);
     result = vkEnumeratePhysicalDevices(instance, &count, devices.data());
     if (result != VK_SUCCESS) {
+        if (surface) vkDestroySurfaceKHR(instance, surface, nullptr);
         vkDestroyInstance(instance, nullptr);
         return "Vulkan GPU enumeration failed (VkResult " +
                std::to_string(static_cast<int>(result)) + ").";
@@ -58,10 +82,14 @@ std::string probe_vulkan() {
         std::vector<VkQueueFamilyProperties> queues(queue_count);
         vkGetPhysicalDeviceQueueFamilyProperties(devices[i], &queue_count, queues.data());
         int graphics_family = -1;
+        int present_family = -1;
         for (uint32_t q = 0; q < queue_count; ++q) {
-            if (queues[q].queueCount && (queues[q].queueFlags & VK_QUEUE_GRAPHICS_BIT)) {
-                graphics_family = static_cast<int>(q);
-                break;
+            if (!queues[q].queueCount) continue;
+            if (queues[q].queueFlags & VK_QUEUE_GRAPHICS_BIT) graphics_family = static_cast<int>(q);
+            if (surface) {
+                VkBool32 supported = VK_FALSE;
+                if (vkGetPhysicalDeviceSurfaceSupportKHR(devices[i], q, surface, &supported) == VK_SUCCESS && supported)
+                    present_family = static_cast<int>(q);
             }
         }
         uint32_t ext_count = 0;
@@ -82,9 +110,12 @@ std::string probe_vulkan() {
                << VK_VERSION_MINOR(properties.apiVersion) << "."
                << VK_VERSION_PATCH(properties.apiVersion) << "\n"
                << "Graphics queue: " << (graphics_family >= 0 ? "available" : "not found") << "\n"
+               << "Android surface: " << (surface ? "created" : "waiting for SurfaceView") << "\n"
+               << "Present queue: " << (present_family >= 0 ? "available" : (surface ? "not found" : "not tested")) << "\n"
                << "VK_KHR_swapchain: " << (swapchain ? "available" : "not available") << "\n";
         graphics_found |= graphics_family >= 0;
     }
+    if (surface) vkDestroySurfaceKHR(instance, surface, nullptr);
     vkDestroyInstance(instance, nullptr);
     if (!graphics_found) report << "\nNo graphics-capable queue was found.";
     return report.str();
