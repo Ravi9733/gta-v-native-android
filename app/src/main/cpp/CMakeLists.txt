@@ -6,5 +6,6 @@ target_compile_features(gtav_android PRIVATE cxx_std_20)
 target_compile_options(gtav_android PRIVATE -Wall -Wextra -Werror)
 
 find_library(log-lib log)
+find_library(android-lib android)
 find_library(vulkan-lib vulkan)
-target_link_libraries(gtav_android PRIVATE ${log-lib} ${vulkan-lib})
+target_link_libraries(gtav_android PRIVATE ${log-lib} ${android-lib} ${vulkan-lib})
