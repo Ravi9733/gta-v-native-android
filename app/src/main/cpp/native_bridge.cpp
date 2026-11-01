@@ -443,6 +443,7 @@ Java_org_macnativegames_gtavandroid_MainActivity_nativePortStatus(
         "Android ARM64 native shell is active.\n"
         "GTA V game runtime is not connected.\n\n" +
         surface_status() + "\n\n" + probe_vulkan() +
+        "\n\n" + probe_aaudio() +
         "\n\nVulkan clear/present smoke test only; original NVN renderer and GTA runtime are not connected.";
     return env->NewStringUTF(status.c_str());
 }
