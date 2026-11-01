@@ -37,6 +37,7 @@ Adding only an APK wrapper or changing compiler flags would therefore produce a 
 - [ ] Introduce a renderer interface separating guest NVN calls from Metal-specific implementation.
 - [ ] Implement Vulkan backend and shader translation path.
 - [ ] Port audio, input and filesystem services.
+- [x] Add an Android `CLOCK_BOOTTIME` implementation for the guest steady clock in `runtime/time_host.c`; an NDK compile-only target checks this source. It is not linked into the app runtime yet.
 - [ ] Build and test on a physical Android device.
 
 This status file is deliberately explicit: an Android APK is not ready until the platform and Vulkan work above is implemented and tested.
