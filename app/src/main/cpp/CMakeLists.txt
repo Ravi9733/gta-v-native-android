@@ -4,5 +4,7 @@ project(gtav_android LANGUAGES CXX)
 add_library(gtav_android SHARED native_bridge.cpp)
 target_compile_features(gtav_android PRIVATE cxx_std_20)
 target_compile_options(gtav_android PRIVATE -Wall -Wextra -Werror)
+
 find_library(log-lib log)
-target_link_libraries(gtav_android PRIVATE ${log-lib})
+find_library(vulkan-lib vulkan)
+target_link_libraries(gtav_android PRIVATE ${log-lib} ${vulkan-lib})
