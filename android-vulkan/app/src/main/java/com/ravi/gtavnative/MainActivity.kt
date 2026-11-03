@@ -14,6 +14,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     private lateinit var status: TextView
     private external fun nativeVulkanInfo(): String
     private external fun nativeInspectSurface(surface: Surface): String
+    private external fun nativeRenderFrame(surface: Surface, width: Int, height: Int): String
 
     companion object {
         init {
@@ -61,7 +62,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
-        // The next milestone will create and resize a Vulkan swapchain for this surface.
+        status.text = nativeRenderFrame(holder.surface, width, height)
     }
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {
