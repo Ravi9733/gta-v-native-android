@@ -164,6 +164,7 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     VkSemaphore imageAvailable = VK_NULL_HANDLE;
     VkSemaphore renderFinished = VK_NULL_HANDLE;
     std::vector<VkFramebuffer> framebuffers;
+    std::vector<VkImageView> imageViews;
     std::vector<VkImage> images;
     std::string message = "Vulkan frame presentation failed.";
 
@@ -171,6 +172,7 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
         if (device != VK_NULL_HANDLE) {
             vkDeviceWaitIdle(device);
             for (auto framebuffer : framebuffers) vkDestroyFramebuffer(device, framebuffer, nullptr);
+            for (auto view : imageViews) vkDestroyImageView(device, view, nullptr);
             if (renderPass != VK_NULL_HANDLE) vkDestroyRenderPass(device, renderPass, nullptr);
             if (commandPool != VK_NULL_HANDLE) vkDestroyCommandPool(device, commandPool, nullptr);
             if (imageAvailable != VK_NULL_HANDLE) vkDestroySemaphore(device, imageAvailable, nullptr);
@@ -360,6 +362,7 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     if (result != VK_SUCCESS) return fail("vkCreateRenderPass", result);
 
     framebuffers.resize(images.size(), VK_NULL_HANDLE);
+    imageViews.resize(images.size(), VK_NULL_HANDLE);
     for (size_t i = 0; i < images.size(); ++i) {
         VkImageViewCreateInfo viewCreate{VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO};
         viewCreate.image = images[i];
@@ -373,6 +376,7 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
         VkImageView view = VK_NULL_HANDLE;
         result = vkCreateImageView(device, &viewCreate, nullptr, &view);
         if (result != VK_SUCCESS) return fail("vkCreateImageView", result);
+        imageViews[i] = view;
         VkFramebufferCreateInfo fbCreate{VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO};
         fbCreate.renderPass = renderPass;
         fbCreate.attachmentCount = 1;
@@ -382,7 +386,6 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
         fbCreate.layers = 1;
         VkFramebuffer framebuffer = VK_NULL_HANDLE;
         result = vkCreateFramebuffer(device, &fbCreate, nullptr, &framebuffer);
-        vkDestroyImageView(device, view, nullptr);
         if (result != VK_SUCCESS) return fail("vkCreateFramebuffer", result);
         framebuffers[i] = framebuffer;
     }
