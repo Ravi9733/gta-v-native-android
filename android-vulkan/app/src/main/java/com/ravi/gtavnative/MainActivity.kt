@@ -4,11 +4,16 @@ import android.app.Activity
 import android.os.Bundle
 import android.graphics.Typeface
 import android.view.Gravity
+import android.view.Surface
+import android.view.SurfaceHolder
+import android.view.SurfaceView
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class MainActivity : Activity() {
+class MainActivity : Activity(), SurfaceHolder.Callback {
+    private lateinit var status: TextView
     private external fun nativeVulkanInfo(): String
+    private external fun nativeInspectSurface(surface: Surface): String
 
     companion object {
         init {
@@ -24,24 +29,42 @@ class MainActivity : Activity() {
             textSize = 25f
             typeface = Typeface.DEFAULT_BOLD
         }
-        val status = TextView(this).apply {
-            text = nativeVulkanInfo()
-            textSize = 16f
-            setPadding(0, 24, 0, 0)
+        status = TextView(this).apply {
+            text = nativeVulkanInfo() + "\n\nWaiting for Android surface…"
+            textSize = 14f
+            setPadding(0, 20, 0, 20)
+        }
+        val previewSurface = SurfaceView(this).apply {
+            holder.addCallback(this@MainActivity)
         }
         val note = TextView(this).apply {
-            text = "Developer prototype • Vulkan device probe only"
-            textSize = 13f
-            setPadding(0, 24, 0, 0)
+            text = "Vulkan surface compatibility test • No game renderer yet"
+            textSize = 12f
+            setPadding(0, 16, 0, 0)
         }
 
         setContentView(LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            gravity = Gravity.CENTER
-            setPadding(32, 24, 32, 24)
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(28, 20, 28, 20)
             addView(title)
             addView(status)
+            addView(previewSurface, LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, 180
+            ))
             addView(note)
         })
+    }
+
+    override fun surfaceCreated(holder: SurfaceHolder) {
+        status.text = nativeInspectSurface(holder.surface)
+    }
+
+    override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+        // The next milestone will create and resize a Vulkan swapchain for this surface.
+    }
+
+    override fun surfaceDestroyed(holder: SurfaceHolder) {
+        status.text = "Android surface paused. Vulkan presentation test will rerun when resumed."
     }
 }
