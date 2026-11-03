@@ -164,6 +164,7 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     VkCommandPool commandPool = VK_NULL_HANDLE;
     VkSemaphore imageAvailable = VK_NULL_HANDLE;
     VkSemaphore renderFinished = VK_NULL_HANDLE;
+    VkFence frameFence = VK_NULL_HANDLE;
     std::vector<VkFramebuffer> framebuffers;
     std::vector<VkImageView> imageViews;
     std::vector<VkImage> images;
@@ -178,6 +179,7 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
             if (commandPool != VK_NULL_HANDLE) vkDestroyCommandPool(device, commandPool, nullptr);
             if (imageAvailable != VK_NULL_HANDLE) vkDestroySemaphore(device, imageAvailable, nullptr);
             if (renderFinished != VK_NULL_HANDLE) vkDestroySemaphore(device, renderFinished, nullptr);
+            if (frameFence != VK_NULL_HANDLE) vkDestroyFence(device, frameFence, nullptr);
             if (swapchain != VK_NULL_HANDLE) vkDestroySwapchainKHR(device, swapchain, nullptr);
             vkDestroyDevice(device, nullptr);
         }
@@ -420,6 +422,9 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     if (result != VK_SUCCESS) return fail("vkCreateSemaphore(imageAvailable)", result);
     result = vkCreateSemaphore(device, &semaphoreCreate, nullptr, &renderFinished);
     if (result != VK_SUCCESS) return fail("vkCreateSemaphore(renderFinished)", result);
+    VkFenceCreateInfo fenceCreate{VK_STRUCTURE_TYPE_FENCE_CREATE_INFO};
+    result = vkCreateFence(device, &fenceCreate, nullptr, &frameFence);
+    if (result != VK_SUCCESS) return fail("vkCreateFence(frame)", result);
 
     uint32_t imageIndex = 0;
     result = vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, imageAvailable,
@@ -452,8 +457,10 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     submit.pCommandBuffers = &commandBuffer;
     submit.signalSemaphoreCount = 1;
     submit.pSignalSemaphores = &renderFinished;
-    result = vkQueueSubmit(queue, 1, &submit, VK_NULL_HANDLE);
+    result = vkQueueSubmit(queue, 1, &submit, frameFence);
     if (result != VK_SUCCESS) return fail("vkQueueSubmit", result);
+    result = vkWaitForFences(device, 1, &frameFence, VK_TRUE, UINT64_MAX);
+    if (result != VK_SUCCESS) return fail("vkWaitForFences(frame)", result);
     VkPresentInfoKHR present{VK_STRUCTURE_TYPE_PRESENT_INFO_KHR};
     present.waitSemaphoreCount = 1;
     present.pWaitSemaphores = &renderFinished;
