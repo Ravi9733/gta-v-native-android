@@ -276,6 +276,10 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     VkSurfaceCapabilitiesKHR caps{};
     result = vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physical, surface, &caps);
     if (result != VK_SUCCESS) return fail("vkGetPhysicalDeviceSurfaceCapabilitiesKHR", result);
+    if ((caps.supportedUsageFlags & VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT) == 0) {
+        cleanup();
+        return env->NewStringUTF("Surface images do not support color-attachment usage.");
+    }
     uint32_t formatCount = 0;
     result = vkGetPhysicalDeviceSurfaceFormatsKHR(physical, surface, &formatCount, nullptr);
     if (result != VK_SUCCESS || formatCount == 0) return fail("No surface formats", result);
@@ -283,11 +287,15 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
     result = vkGetPhysicalDeviceSurfaceFormatsKHR(physical, surface, &formatCount, formats.data());
     if (result != VK_SUCCESS) return fail("vkGetPhysicalDeviceSurfaceFormatsKHR", result);
     VkSurfaceFormatKHR chosenFormat = formats[0];
-    for (const auto& format : formats) {
-        if (format.format == VK_FORMAT_R8G8B8A8_UNORM ||
-            format.format == VK_FORMAT_B8G8R8A8_UNORM) {
-            chosenFormat = format;
-            break;
+    if (formatCount == 1 && formats[0].format == VK_FORMAT_UNDEFINED) {
+        chosenFormat.format = VK_FORMAT_B8G8R8A8_UNORM;
+    } else {
+        for (const auto& format : formats) {
+            if (format.format == VK_FORMAT_R8G8B8A8_UNORM ||
+                format.format == VK_FORMAT_B8G8R8A8_UNORM) {
+                chosenFormat = format;
+                break;
+            }
         }
     }
     VkExtent2D extent{};
@@ -298,6 +306,10 @@ Java_com_ravi_gtavnative_MainActivity_nativeRenderFrame(
             std::min(caps.maxImageExtent.width, static_cast<uint32_t>(std::max(1, requestedWidth))));
         extent.height = std::max(caps.minImageExtent.height,
             std::min(caps.maxImageExtent.height, static_cast<uint32_t>(std::max(1, requestedHeight))));
+    }
+    if (extent.width == 0 || extent.height == 0) {
+        cleanup();
+        return env->NewStringUTF("Surface has zero extent; waiting for a non-zero resize.");
     }
     uint32_t imageCount = caps.minImageCount + 1;
     if (caps.maxImageCount > 0) imageCount = std::min(imageCount, caps.maxImageCount);
