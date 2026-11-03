@@ -1,17 +1,20 @@
 # GTA V Native Android — independent Android bootstrap
 
-This directory is a separate Android application experiment. It does **not** copy the
-reference project's Android app, game runtime, renderer, generated game code, or assets.
+This branch contains a separate Android prototype module under `android-vulkan/`.
+It does not include GTA V game code, executables, assets, generated game code, or shaders.
 
-## Current milestone
+## Completed prototype milestones
 
-- Native Android app shell (Kotlin + JNI).
-- ARM64-only NDK build.
-- Vulkan loader/device enumeration screen.
-- GitHub Actions debug-APK build.
+- Kotlin Android activity and ARM64-only NDK module.
+- JNI bridge into native C++.
+- Vulkan loader and physical-device enumeration.
+- Android `SurfaceView` integration.
+- Native checks for `VK_KHR_surface`, `VK_KHR_android_surface`,
+  graphics-queue presentation support, and `VK_KHR_swapchain`.
 
-This is only a platform/bootstrap milestone. It is **not a playable GTA V port** and contains
-no GTA V executable, game data, shaders, or copyrighted assets.
+The surface check creates and destroys a Vulkan Android surface and reports device
+capabilities. It does **not** create a swapchain, submit draw commands, or render frames.
+This is not a playable GTA V port.
 
 ## Build
 
@@ -23,13 +26,14 @@ gradle assembleDebug
 
 The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
-## Roadmap
+## Next engineering milestones
 
-1. Validate Android lifecycle, Vulkan loader, and Adreno device enumeration.
-2. Add a Vulkan surface and render-pass/device capability tests.
-3. Design an independent guest-runtime boundary and file-system abstraction.
-4. Research a legally distributable Xbox 360 guest-code recompilation pipeline.
-5. Add touch/controller input, audio, save paths, and performance diagnostics.
+1. Create a Vulkan logical device and Android swapchain.
+2. Add a minimal clear-colour render pass and frame presentation loop.
+3. Add lifecycle-safe swapchain recreation on rotation/surface resize.
+4. Design an independent guest-runtime boundary and file-system abstraction.
+5. Research a legally distributable Xbox 360 guest-code recompilation pipeline.
+6. Add touch/controller input, audio, save paths, and performance diagnostics.
 
-Bring your own legally obtained game files. This repository intentionally contains no game data.
-Third-party components, if added later, must retain their original licenses and notices.
+Bring your own legally obtained game files. No proprietary game data is stored here.
+Any third-party code or libraries added later must retain their original licenses and notices.
