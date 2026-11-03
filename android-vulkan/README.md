@@ -41,3 +41,17 @@ The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
 Bring your own legally obtained game files. No proprietary game data is stored here.
 Any third-party code or libraries added later must retain their original licenses and notices.
+
+
+## Frame synchronization groundwork
+
+The one-shot swapchain test now attaches a Vulkan fence to graphics submission and waits for
+that fence before presenting. This makes completion of the submitted command buffer explicit
+instead of relying only on queue-wide idle synchronization. The test still creates and destroys
+the Vulkan instance, device, swapchain, and related objects for each invocation; it is **not**
+the persistent renderer yet.
+
+Next renderer milestone: move instance/device/queue ownership into a persistent native renderer
+context, then retain per-frame fences/semaphores and recreate only swapchain-dependent resources
+when Android reports a surface resize or replacement. A device run is still required to validate
+actual presentation on target hardware.
