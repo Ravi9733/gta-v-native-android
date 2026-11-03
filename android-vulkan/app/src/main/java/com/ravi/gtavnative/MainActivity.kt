@@ -39,7 +39,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
             holder.addCallback(this@MainActivity)
         }
         val note = TextView(this).apply {
-            text = "Vulkan surface compatibility test • No game renderer yet"
+            text = "Vulkan swapchain frame test • Renderer bootstrap only"
             textSize = 12f
             setPadding(0, 16, 0, 0)
         }
@@ -62,6 +62,10 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+        if (width <= 0 || height <= 0 || !holder.surface.isValid) {
+            status.text = "Waiting for a valid, non-zero Android surface…"
+            return
+        }
         status.text = nativeRenderFrame(holder.surface, width, height)
     }
 
